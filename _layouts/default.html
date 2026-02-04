@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{{ page.title }}</title>
+    {% include head.html %}
+  </head>
+
+  <body class="{{ page.body_class | default: 'homepage' }} is-preload">
+    <div id="page-wrapper">
+
+      {% include header.html %}
+
+      {{ content }}
+
+      {% include footer.html %}
+
+    </div>
+
+    {% include scripts.html %}
+  </body>
+</html>
