@@ -1,95 +1,90 @@
 <!-- Header -->
-    <section id="header">
+<section id="header">
 
-        <!-- Logo -->
-            <h1><a href="{{ '/index.html' | relative_url }}">Xiao Shang <span style="font-size: 0.6em;">P.Eng.</span></a></h1>
+  <!-- Logo -->
+  <h1>
+    <a href="{{ '/index.html' | relative_url }}">
+      Xiao Shang <span style="font-size: 0.6em;">P.Eng.</span>
+    </a>
+  </h1>
 
-        <!-- Nav -->
-            <nav id="nav">
-                <ul>
-                    <li class="current"><a href="{{ '/index.html' | relative_url }}">Home</a></li>
-                    <li>
-                        <a href="projects.html">Projects</a>
-                        <ul>
-                            <li><a href="projects.html#ded">Directed energy deposition</a></li>
-                            <li><a href="projects.html#tailor3Dms">3D microstructures</a></li>
-                            <li><a href="projects.html#fgm">Functionally graded material</a></li>
-                            <li><a href="projects.html#bam">Bisatble auxetics</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="https://scholar.google.com/citations?user=dkTMoJQAAAAJ&hl=en" target="_blank">Publications</a></li>
-                    <li>
-                        <a href="#">My web apps</a>
-                        <ul>
-                            <li><a href="/creditor/">CRediTor - A tool for CRediT Statement generation</a></li>
-                        </ul>
-                    <li>
-                    <li><a href="teaching&mentoring.html">Teaching & Mentoring</a></li>
-                    <li>
-                        <a href="#">Media Coverage</a>
-                        <ul>
-                            <li><a href="https://news.engineering.utoronto.ca/this-machine-learning-method-aims-to-speed-up-the-design-of-next-generation-biomedical-implants-and-aerospace-materials/" target="_blank">Deep learning work covered by UofT Engineering News</a></li>
-                            <li><a href="https://mse.utoronto.ca/news/mse-student-xiao-shang-wins-the-poster-prize-at-the-accelerate-conference/" target="_blank">Conference poster prize featured in UofT MSE news</a></li>
-                            <li><a href="https://mse.utoronto.ca/news/mse-phd-candidates-were-interviewed-by-citynews/" target="_blank">Interview by Toronto City News</a></li>
-                            <li><a href="https://news.engineering.utoronto.ca/u-of-t-engineering-researchers-are-advancing-metal-3d-printing-technology-for-automotive-energy-and-biomedical-applications/" target="_blank">Our additive manufacturing lab by UofT News</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="aboutme.html">About Me</a>
-                        <ul>
-                            <li><a href="aboutme.html#education">Education & Training</a></li>
-                            <li><a href="aboutme.html#awards">Awards</a></li>
-                            <li><a href="aboutme.html#cv">Curriculum Vitae</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="memes.html">Memes for fun</a></li>
-                </ul>
-            </nav>
+  <!-- Nav -->
+  <nav id="nav">
+    <ul>
+      <li class="{% if page.nav == 'home' %}current{% endif %}">
+        <a href="{{ '/index.html' | relative_url }}">Home</a>
+      </li>
 
-        <!-- Banner -->
-            <section id="banner">
-                <header>
-                    <h2>Howdy. This is Xiao.</h2>
-                    <p>Researcher, Engineer, & Problem solver</p>
-                </header>
-            </section>
+      <li class="{% if page.nav == 'projects' %}current{% endif %}">
+        <a href="{{ '/projects.html' | relative_url }}">Projects</a>
+        <ul>
+          <li><a href="{{ '/projects.html#ded' | relative_url }}">Directed energy deposition</a></li>
+          <li><a href="{{ '/projects.html#tailor3Dms' | relative_url }}">3D microstructures</a></li>
+          <li><a href="{{ '/projects.html#fgm' | relative_url }}">Functionally graded material</a></li>
+          <li><a href="{{ '/projects.html#bam' | relative_url }}">Bisatble auxetics</a></li>
+        </ul>
+      </li>
 
-        <!-- Intro -->
-            <section id="intro" class="container">
-                <div class="row">
-                    <div class="col-4 col-12-medium">
-                        <section class="first">
-                            <i class="icon solid featured fa-cog"></i>
-                            <header>
-                                <h2>Additive manufacturing</h2>
-                            </header>
-                            <p>Leverage cutting-edge in-situ monitoring, machine learning, and optimization techniques to improve the printability of metal additive manufacturing.</p>
-                        </section>
-                    </div>
-                    <div class="col-4 col-12-medium">
-                        <section class="middle">
-                            <i class="icon solid featured alt fa-brain"></i>
-                            <header>
-                                <h2>Machine learning</h2>
-                            </header>
-                            <p>Solve material mechanics problems with machine learning, deep learning, and computer vision.</p>
-                        </section>
-                    </div>
-                    <div class="col-4 col-12-medium">
-                        <section class="last">
-                            <i class="icon solid featured alt2 fa-atom"></i>
-                            <header>
-                                <h2>Functionally graded materials</h2>
-                            </header>
-                            <p>Development of functionally graded materials with superior mechanical properties by addtive manufacturing.</p>
-                        </section>
-                    </div>
-                </div>
-                <footer>
-                    <ul class="actions">
-                        <li><a href="projects.html" class="button large">Projects Details</a></li>
-                    </ul>
-                </footer>
-            </section>
+      <li>
+        <a href="https://scholar.google.com/citations?user=dkTMoJQAAAAJ&hl=en" target="_blank" rel="noopener">
+          Publications
+        </a>
+      </li>
 
-    </section>
+      <li class="{% if page.nav == 'apps' %}current{% endif %}">
+        <a href="#">My web apps</a>
+        <ul>
+          <li><a href="{{ '/creditor/' | relative_url }}">CRediTor - A tool for CRediT Statement generation</a></li>
+        </ul>
+      </li>
+
+      <li class="{% if page.nav == 'teaching' %}current{% endif %}">
+        <a href="{{ '/teaching&mentoring.html' | relative_url }}">Teaching &amp; Mentoring</a>
+      </li>
+
+      <li class="{% if page.nav == 'media' %}current{% endif %}">
+        <a href="#">Media Coverage</a>
+        <ul>
+          <li>
+            <a href="https://news.engineering.utoronto.ca/this-machine-learning-method-aims-to-speed-up-the-design-of-next-generation-biomedical-implants-and-aerospace-materials/"
+               target="_blank" rel="noopener">
+              Deep learning work covered by UofT Engineering News
+            </a>
+          </li>
+          <li>
+            <a href="https://mse.utoronto.ca/news/mse-student-xiao-shang-wins-the-poster-prize-at-the-accelerate-conference/"
+               target="_blank" rel="noopener">
+              Conference poster prize featured in UofT MSE news
+            </a>
+          </li>
+          <li>
+            <a href="https://mse.utoronto.ca/news/mse-phd-candidates-were-interviewed-by-citynews/"
+               target="_blank" rel="noopener">
+              Interview by Toronto City News
+            </a>
+          </li>
+          <li>
+            <a href="https://news.engineering.utoronto.ca/u-of-t-engineering-researchers-are-advancing-metal-3d-printing-technology-for-automotive-energy-and-biomedical-applications/"
+               target="_blank" rel="noopener">
+              Our additive manufacturing lab by UofT News
+            </a>
+          </li>
+        </ul>
+      </li>
+
+      <li class="{% if page.nav == 'about' %}current{% endif %}">
+        <a href="{{ '/aboutme.html' | relative_url }}">About Me</a>
+        <ul>
+          <li><a href="{{ '/aboutme.html#education' | relative_url }}">Education &amp; Training</a></li>
+          <li><a href="{{ '/aboutme.html#awards' | relative_url }}">Awards</a></li>
+          <li><a href="{{ '/aboutme.html#cv' | relative_url }}">Curriculum Vitae</a></li>
+        </ul>
+      </li>
+
+      <li class="{% if page.nav == 'memes' %}current{% endif %}">
+        <a href="{{ '/memes.html' | relative_url }}">Memes for fun</a>
+      </li>
+    </ul>
+  </nav>
+
+</section>
