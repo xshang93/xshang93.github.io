@@ -34,6 +34,18 @@ figcaption {
   font-size: 0.9em;
   color: #777;
   margin-top: 0.5em;
+  text-align: center;
+}
+
+/* Center the actual image inside featured figures */
+figure.image.featured {
+  text-align: center;
+}
+
+figure.image.featured > img {
+  display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .row.aln-center {
