@@ -8,12 +8,12 @@
   {% endfor %}
 {% endif %}
 
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-<link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}" />
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-BHY8P38ECM"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
-{% if page.extra_css %}
-  {% for css in page.extra_css %}
-    <link rel="stylesheet" href="{{ css | relative_url }}" />
-  {% endfor %}
-{% endif %}
+  gtag('config', 'G-BHY8P38ECM');
+</script>
