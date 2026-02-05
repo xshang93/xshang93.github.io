@@ -36,6 +36,17 @@ figcaption {
   margin-top: 0.5em;
 }
 
+.row.aln-center {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.5em;
+}
+
+.row.aln-center figure.image {
+  margin: 0;
+}
+
 body {
 	line-height: 1;
 }
