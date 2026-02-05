@@ -31,7 +31,7 @@
         </a>
       </li>
 
-      <li class="{% if page.nav == 'apps' %}current{% endif %}">
+      <li>
         <a href="#">My web apps</a>
         <ul>
           <li><a href="{{ '/creditor/' | relative_url }}">CRediTor - A tool for CRediT Statement generation</a></li>
@@ -42,33 +42,13 @@
         <a href="{{ '/teaching&mentoring.html' | relative_url }}">Teaching &amp; Mentoring</a>
       </li>
 
-      <li class="{% if page.nav == 'media' %}current{% endif %}">
+      <li>
         <a href="#">Media Coverage</a>
         <ul>
-          <li>
-            <a href="https://news.engineering.utoronto.ca/this-machine-learning-method-aims-to-speed-up-the-design-of-next-generation-biomedical-implants-and-aerospace-materials/"
-               target="_blank" rel="noopener">
-              Deep learning work covered by UofT Engineering News
-            </a>
-          </li>
-          <li>
-            <a href="https://mse.utoronto.ca/news/mse-student-xiao-shang-wins-the-poster-prize-at-the-accelerate-conference/"
-               target="_blank" rel="noopener">
-              Conference poster prize featured in UofT MSE news
-            </a>
-          </li>
-          <li>
-            <a href="https://mse.utoronto.ca/news/mse-phd-candidates-were-interviewed-by-citynews/"
-               target="_blank" rel="noopener">
-              Interview by Toronto City News
-            </a>
-          </li>
-          <li>
-            <a href="https://news.engineering.utoronto.ca/u-of-t-engineering-researchers-are-advancing-metal-3d-printing-technology-for-automotive-energy-and-biomedical-applications/"
-               target="_blank" rel="noopener">
-              Our additive manufacturing lab by UofT News
-            </a>
-          </li>
+          <li><a href="https://news.engineering.utoronto.ca/this-machine-learning-method-aims-to-speed-up-the-design-of-next-generation-biomedical-implants-and-aerospace-materials/" target="_blank" rel="noopener">Deep learning work covered by UofT Engineering News</a></li>
+          <li><a href="https://mse.utoronto.ca/news/mse-student-xiao-shang-wins-the-poster-prize-at-the-accelerate-conference/" target="_blank" rel="noopener">Conference poster prize featured in UofT MSE news</a></li>
+          <li><a href="https://mse.utoronto.ca/news/mse-phd-candidates-were-interviewed-by-citynews/" target="_blank" rel="noopener">Interview by Toronto City News</a></li>
+          <li><a href="https://news.engineering.utoronto.ca/u-of-t-engineering-researchers-are-advancing-metal-3d-printing-technology-for-automotive-energy-and-biomedical-applications/" target="_blank" rel="noopener">Our additive manufacturing lab by UofT News</a></li>
         </ul>
       </li>
 
@@ -86,5 +66,9 @@
       </li>
     </ul>
   </nav>
+
+  {% if page.nav == 'home' %}
+    {% include home-hero.html %}
+  {% endif %}
 
 </section>
