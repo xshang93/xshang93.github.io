@@ -1,0 +1,250 @@
+---
+layout: default
+title: "Research Vision | Xiao Shang"
+description: "Cross-scale programmable metals: linking melt pool, composition, microstructure, architecture and component with AI and in-process control."
+nav: research
+---
+
+<section class="page-head">
+  <div class="container">
+    <span class="eyebrow">Research vision</span>
+    <h1>Cross-scale programmable metals</h1>
+    <p class="lead">
+      Making a metal part means making many decisions at once: the melt pool, the local composition, the microstructure,
+      the multi-alloy architecture, and the shape of the component. Additive manufacturing lets us choose each of these
+      point by point. My goal is to make those choices together, and to verify them while the part is being built.
+    </p>
+  </div>
+</section>
+
+<!-- Scale graphic -->
+<section class="section dark" style="padding:56px 0 64px;">
+  <div class="container">
+    {% include scales.html %}
+  </div>
+</section>
+
+<!-- Why -->
+<section class="section">
+  <div class="container two-col">
+    <div>
+      <h2>The problem</h2>
+      <p>
+        Turbine blades and blisks, propulsion and pressure-boundary components, and repaired high-value parts all face
+        demands that no single alloy meets everywhere: strength in one region, ductility or toughness in another,
+        heat or corrosion resistance at the surface. These parts also come from a small number of casting and forging suppliers
+        and take a long time to qualify.
+      </p>
+      <p>
+        Additive manufacturing can place different alloys and microstructures exactly where they are needed. Groups around
+        the world have now shown this kind of control, but usually at one scale at a time. The open problems are that
+        multiscale models are not coupled, there are few design tools for parts with spatially varying properties, in-situ
+        sensing is rarely closed into control, and qualification remains slow.
+      </p>
+    </div>
+    <div>
+      <h2>My approach</h2>
+      <p>
+        I have programmed metals at four coupled scales, from micrometre-scale melt pools to millimetre-scale
+        multi-alloy architectures, using AI <i>within</i> each scale to design and control the process. At MIT
+        I am now extending this to whole components.
+      </p>
+      <p>
+        My lab will use AI <i>across</i> scales: carrying a part's requirements from the component down to the
+        melt pool, and using in-process sensing and control to keep every scale on target during the build.
+      </p>
+      <div class="key">
+        <b>How is this different from ICME?</b> Integrated computational materials engineering <i>predicts</i>
+        process&ndash;structure&ndash;property relationships. Cross-scale programming <i>commands</i> them in hardware
+        and verifies the result in process.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Ladder -->
+<section class="section alt">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Track record</span>
+      <h2>The scale ladder</h2>
+      <p>
+        Each rung lists what I have published at that scale and the AI method used within it.
+        <span class="pill">Published</span> marks peer-reviewed results; <span class="pill ongoing">Ongoing</span> marks current, unpublished work.
+      </p>
+    </div>
+
+    <ol class="ladder">
+      <li class="rung current">
+        <div class="scale"><b>Component</b>cm &ndash; dm</div>
+        <div class="content">
+          <div>
+          <h3>Functionally graded turbine blisk</h3>
+          <p>
+            <span class="pill ongoing">Ongoing at MIT</span>
+            Design, fabrication and testing of a component-level, functionally graded gas-turbine blisk (DARPA METALS program),
+            using a dilution- and thermal-aware planner that co-optimizes toolpath and composition for multi-material DED.
+          </p>
+          <p><span class="pill">AI: bilevel optimization</span></p></div>
+          <img src="images/work/blisk_planner.jpg" alt="Toolpath planner render of the graded blisk" loading="lazy" />
+        </div>
+      </li>
+
+      <li class="rung">
+        <div class="scale"><b>Architecture</b>0.1 mm &ndash; mm</div>
+        <div class="content">
+          <div>
+          <h3>Heterostructured and multifunctional multi-metal parts</h3>
+          <p>
+            <span class="pill">Published</span>
+            Bi-metallic 316L/17-4PH heterostructured steels with <b>27.3% higher tensile ductility</b> than 316L, explained by a
+            confined-necking co-deformation mechanism (<a href="https://doi.org/10.1016/j.actamat.2026.121952" target="_blank" rel="noopener"><i>Acta Materialia</i> 2026</a>).
+            Multi-metal parts with magnetic, data-encoding, sealing and mechanical functions, with two patent applications
+            (<a href="https://doi.org/10.1002/metm.70032" target="_blank" rel="noopener"><i>MetalMat</i> 2026</a>).
+            Process windows for multi-track and multi-layer builds (<a href="https://doi.org/10.1016/j.addma.2025.104736" target="_blank" rel="noopener"><i>Additive Manufacturing</i> 2025</a>).
+          </p>
+          <p><span class="pill ongoing">Ongoing</span> Radial bi-metallic materials that overcome the strength&ndash;ductility trade-off under ultra-high-speed impact (manuscript submitted).</p>
+          <p><span class="pill">AI: machine learning + genetic-algorithm inverse process optimization (AIDED)</span></p></div>
+          <img class="contain" src="images/thumbs/acta_fgm.jpg" alt="Heterostructured bi-metallic steels" loading="lazy" />
+        </div>
+      </li>
+
+      <li class="rung">
+        <div class="scale"><b>Microstructure</b>&micro;m &ndash; 100 &micro;m</div>
+        <div class="content">
+          <div>
+          <h3>Inverse microstructure design</h3>
+          <p>
+            <span class="pill">Published</span>
+            From target mechanical properties directly to 3D microstructures, with a 3D convolutional neural-network surrogate
+            and a genetic algorithm (<a href="https://doi.org/10.1016/j.mattod.2023.09.007" target="_blank" rel="noopener"><i>Materials Today</i> 2023</a>).
+          </p>
+          <p><span class="pill">AI: 3D-CNN surrogate + genetic algorithm</span></p></div>
+          <img class="contain" src="images/thumbs/tailor_ms.jpg" alt="Inverse microstructure design framework" loading="lazy" />
+        </div>
+      </li>
+
+      <li class="rung">
+        <div class="scale"><b>Composition</b>voxel &ndash; track</div>
+        <div class="content">
+          <div>
+          <h3>In-situ alloying and compositional grading</h3>
+          <p>
+            <span class="pill">Published</span>
+            Invited review of microstructure and composition engineering by DED, including in-situ alloying and graded builds
+            (<a href="https://doi.org/10.1016/j.addma.2026.105240" target="_blank" rel="noopener"><i>Additive Manufacturing</i> 2026</a>);
+            co-author on active learning for NiCoCr alloy discovery in AM
+            (<a href="https://doi.org/10.1038/s44334-026-00098-5" target="_blank" rel="noopener"><i>npj Advanced Manufacturing</i> 2026</a>).
+          </p>
+          <p><span class="pill ongoing">Ongoing at MIT</span> A hybrid laser powder bed fusion + inkjet process for voxel-level, in-situ alloying of functionally graded materials.</p>
+          <p><span class="pill">AI: active learning</span></p></div>
+          <img src="images/work/hamr3_printhead.jpg" alt="HAMR3 inkjet printhead over the build area" loading="lazy" />
+        </div>
+      </li>
+
+      <li class="rung">
+        <div class="scale"><b>Melt pool</b>1 &ndash; 100 &micro;m</div>
+        <div class="content">
+          <div>
+          <h3>Melt-pool mechanics and control</h3>
+          <p>
+            <span class="pill">Published</span>
+            Mechanism and quantification of melt-pool morphology in laser DED, combining CFD with in-situ high-speed infrared imaging
+            (<a href="https://doi.org/10.1016/j.jmapro.2025.10.097" target="_blank" rel="noopener"><i>J. Manufacturing Processes</i> 2025</a>, co-first author);
+            co-author on ML-aided keyhole simulation (<a href="https://doi.org/10.1016/j.ijheatmasstransfer.2025.127279" target="_blank" rel="noopener"><i>IJHMT</i> 2025</a>).
+          </p>
+          <p>
+            <span class="pill ongoing">Ongoing</span> Deep-learning closed-loop control of DED (manuscript in preparation; patent application in preparation).
+            Magnetic-field-assisted DED of 316L and IN718 observed by in-situ synchrotron X-ray imaging with Prof. Peter D. Lee at UCL (manuscript in preparation).
+          </p>
+          <p><span class="pill">AI: automated image analysis &amp; learned control</span></p></div>
+          <img src="images/thumbs/meltpool.jpg" alt="Melt pool cross-sections from DED" loading="lazy" />
+        </div>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- Future -->
+<section class="section">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Future research</span>
+      <h2>Linking the scales</h2>
+      <p>
+        The rungs above were each solved on their own. The next step is to connect them. Three research thrusts, tied
+        together by mechanical testing of the parts we make, define the program I will build as a faculty member.
+      </p>
+    </div>
+
+    <div class="grid cols-3">
+      <div class="card thrust">
+        <div class="body">
+          <div class="label">A</div>
+          <h3>Design across scales</h3>
+          <p>
+            Treat requirement &rarr; architecture &rarr; microstructure &rarr; process settings as one inverse problem instead of four,
+            using AI surrogates trained on our own process data.
+          </p>
+          <p><b>Near term:</b> carry a property requirement (e.g. strength at the rim, ductility at the bore of a rotor) down to toolpath and composition.<br />
+          <b>Long term:</b> add solidification-scale targets.</p>
+        </div>
+      </div>
+      <div class="card thrust">
+        <div class="body">
+          <div class="label">B</div>
+          <h3>Deliver across scales</h3>
+          <p>
+            In-process sensing and feedback control that keep each scale on target as the part grows:
+            thermal history (closed-loop control), local composition (dilution-aware re-planning), and microstructure
+            (external actuators such as magnetic fields).
+          </p>
+          <p><b>Output:</b> region-by-region process records that support qualification and certified repair.</p>
+        </div>
+      </div>
+      <div class="card thrust">
+        <div class="body">
+          <div class="label">C</div>
+          <h3>Engineering autonomy</h3>
+          <p>
+            AI agents that run the design &rarr; build &rarr; verify chain with less expert effort, benchmarked against human
+            engineering teams, with logged interventions and safety gates.
+          </p>
+          <p><b>Why:</b> skilled engineers and technicians are now a bottleneck in manufacturing and repair. At MIT I am
+          building a study that compares autonomous AI agent teams with human teams on end-to-end design&ndash;build&ndash;test.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="key" style="margin-top:28px;">
+      <b>Verification closes every loop.</b> Programmed parts are tested in tension, fatigue, impact and at high temperature.
+      My background in solid mechanics and mechanical testing is what turns a printed part into evidence.
+    </div>
+  </div>
+</section>
+
+<!-- Applications & capabilities -->
+<section class="section alt">
+  <div class="container two-col">
+    <div>
+      <h2>Where it matters</h2>
+      <ul class="icon-list">
+        <li><i class="fas fa-fan"></i><span><b>Aero-engine and power-generation turbines:</b> graded, repairable hot-section parts and blisks.</span></li>
+        <li><i class="fas fa-ship"></i><span><b>Naval, marine and defence hardware:</b> in-country, closed-loop repair of propulsion and engine components.</span></li>
+        <li><i class="fas fa-atom"></i><span><b>Nuclear and energy:</b> wear- and corrosion-resistant cladding with controlled dilution.</span></li>
+        <li><i class="fas fa-gem"></i><span><b>Critical materials:</b> graded designs that place scarce elements (Ni, Co, Nb) only where they are needed.</span></li>
+        <li><i class="fas fa-fire"></i><span><b>Extreme environments:</b> impact-tolerant and high-temperature structures validated by mechanics.</span></li>
+      </ul>
+    </div>
+    <div>
+      <h2>What I bring to a lab</h2>
+      <ul class="icon-list">
+        <li><i class="fas fa-tools"></i><span><b>Machine building:</b> designed and built a full-size multi-material DED system (1 kW laser, dual powder feed, CCD and high-speed IR monitoring) from scratch; now developing a hybrid LPBF + inkjet process at MIT.</span></li>
+        <li><i class="fas fa-satellite-dish"></i><span><b>Sensing and control:</b> in-situ imaging, synchrotron X-ray experiments, learned closed-loop control.</span></li>
+        <li><i class="fas fa-brain"></i><span><b>AI for engineering:</b> deep learning, genetic and Bayesian optimization, active learning, AI agents.</span></li>
+        <li><i class="fas fa-compress-arrows-alt"></i><span><b>Mechanics:</b> mechanical testing, deformation mechanisms, finite-element analysis.</span></li>
+        <li><i class="fas fa-lightbulb"></i><span><b>Translation:</b> 2 granted patents, 2 pending US patent applications (a third in preparation), and a venture-competition win.</span></li>
+      </ul>
+    </div>
+  </div>
+</section>

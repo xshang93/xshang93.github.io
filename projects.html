@@ -1,292 +1,319 @@
 ---
 layout: default
-title: "Xiao's projects"
-body_class: no-sidebar
+title: "Research Projects | Xiao Shang"
 nav: projects
 ---
 
-<section id="main">
+<section class="page-head">
   <div class="container">
+    <span class="eyebrow">Projects</span>
+    <h1>Research projects</h1>
+    <p class="lead">
+      Ongoing work at MIT and with collaborators, and published projects from my PhD at the University of Toronto and MSc at McGill. For how they fit together, and where
+      they lead, see my <a href="research.html">research vision</a>.
+    </p>
+    <div class="jump">
+      <a href="#ongoing">Ongoing</a>
+      <a href="#blisk">Graded blisk</a>
+      <a href="#hamr">Inkjet + LPBF</a>
+      <a href="#agents">Agentic engineers</a>
+      <a href="#magnetic">Magnetic-field DED</a>
+      <a href="#closedloop">Closed-loop DED</a>
+      <a href="#radial">Radial bi-metals</a>
+      <a href="#published">Published</a>
+    </div>
+  </div>
+</section>
 
-    <article class="box post">
-      <header>
-        <h2 id="ded">Customized directed energy deposition (DED) system and closed-loop control</h2>
-        <p>Associated with <a href="https://www.zou-mse-utoronto-ca.net/" target="_blank" rel="noopener">LEMAM @ UofT</a></p>
-      </header>
+<section class="section dark" id="ongoing">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Ongoing</span>
+      <h2>Current projects</h2>
+      <p>Work in progress at MIT and with collaborators. Results here are unpublished; status is noted for each project.</p>
+    </div>
 
-      <br>
-      <a class="image featured"><img src="images/ded_bg_large.gif" alt="" /></a>
-
-      <p>
-        This full-sized DED system is equipped with a powerful 1kw IPG laser, two powder feeding hoppers, and a user-friendly
-        interface. Materials available for printing includes 316L stainless steel, PH-17-4 stainless steel, Ni superalloys and
-        more. It also supports in-situ monitoring with a CCD camera and a high-speed IR camera. Upgrading work is ongoing for
-        fully autonomous closed-loop control.
-      </p>
-
-      <div class="row aln-center">
-
-        <figure class="image">
-          <img
-            src="images/ded_machine.png"
-            alt="Customized directed energy deposition system"
-            style="width:360px;height:251px;"
-          />
-          <figcaption>
-            Customized directed energy deposition (DED) system
-          </figcaption>
-        </figure>
-
-        <figure class="image">
-          <img
-            src="images/ded_inside.gif"
-            alt="DED build chamber interior"
-            style="width:360px;height:251px;"
-          />
-          <figcaption>
-            Automated printing and image capturing
-          </figcaption>
-        </figure>
-
-        <figure class="image">
-          <img
-            src="images/clc.gif"
-            alt="Closed-loop control of DED process"
-            style="width:720px;height:251px;"
-          />
-          <figcaption>
-            Comparison with/without AI-enpowered closed-loop control
-          </figcaption>
-        </figure>
-
+    <div class="feature" id="blisk">
+      <figure class="feature-media"><img src="images/work/blisk_planner.jpg" alt="Toolpath planner render of the graded blisk, coloured by alloy" /><figcaption>My toolpath planner: blisk surfaces coloured by alloy (IN718, Monel K-500, INCOLOY 909) beneath the DED nozzle.</figcaption></figure>
+      <div>
+        <span class="pill ongoing">MIT &middot; DARPA METALS program</span>
+        <h3>Functionally graded gas-turbine blisk</h3>
+        <p>
+          A blisk (bladed disk) needs different properties in different places: strength and fatigue resistance at the bore,
+          different performance at the rim and blades. With Prof. Zachary Cordero, I am designing, fabricating and testing a
+          component-level blisk whose alloy changes radially (IN718 &rarr; INCOLOY 909 &rarr; Monel K-500), built by multi-material DED.
+        </p>
+        <ul>
+          <li>Built a planner that co-optimizes the toolpath and the composition for the whole blisk, accounting for dilution between tracks and heat build-up.</li>
+          <li>This is my first component-scale result, and the first link between the architecture and component scales.</li>
+        </ul>
+        <span class="pill">AI: bilevel optimization</span>
       </div>
+    </div>
 
-
-      <br>
-
-      <section>
-        <header>
-          <h2 id="ded_opt">AIDED - Accurate Inverse process optimization framework in laser Directed Energy Deposition</h2>
-          <p>Associated with <a href="https://www.zou-mse-utoronto-ca.net/" target="_blank" rel="noopener">LEMAM @ UofT</a></p>
-        </header>
-
+    <div class="feature flip" id="hamr">
+      <figure class="feature-media"><img src="images/work/hamr3_printhead.jpg" alt="Inkjet printhead over the build area of the HAMR3 hybrid machine" /><img src="images/work/hamr3_concept.jpg" alt="Concept of inkjet in-situ alloying in laser powder bed fusion" /><figcaption>HAMR3 hybrid machine and process concept. Images: Hart group (Z. Kutschke, MIT S.M. thesis, 2023).</figcaption></figure>
+      <div>
+        <span class="pill ongoing">MIT &middot; Mechanosynthesis Group</span>
+        <h3>Hybrid inkjet + laser powder bed fusion</h3>
         <p>
-          Optimizing the processing parameter for DED, and in fact for AM in general is chanllenging but at the same time crucial.
-          Being able to fast and accurately identifying the optimal processing parameters reduces the cost, materials waste, and more
-          importantly, improves the build quality. <br>
-          We use machine learning and computer vision methods to study the melt pool and melt track variations under various processing
-          parameters in order to create a framework for the esay identification of optimal processing parameters.
+          Graded metals made by DED are limited to millimetre resolution, and powder bed fusion has so far graded composition only
+          layer by layer. In Prof. A. John Hart's group I am developing a hybrid process that jets nanoparticle-loaded inks onto each
+          powder layer before the laser melts it, so the alloy forms in situ, voxel by voxel.
         </p>
+        <ul>
+          <li>Goal: smooth in-plane composition gradients at powder bed fusion resolution.</li>
+          <li>A heated build plate supports crack-prone alloys such as refractory metals for propulsion and energy.</li>
+        </ul>
+      </div>
+    </div>
 
-        <div class="row aln-center">
-
-          <figure class="image">
-            <img
-              src="images/AIDED_framework.png"
-              alt="AIDED framework overview"
-              style="width:251px;height:251px;"
-            />
-            <figcaption>
-              AIDED framework overview
-            </figcaption>
-          </figure>
-
-          <figure class="image">
-            <img
-              src="images/AIDED_singletrack.png"
-              alt="Single-track melt pool optimization in AIDED"
-              style="width:523px;height:251px;"
-            />
-            <figcaption>
-              Machine learning model performance in predicting single-track melt pool cross-sections.
-            </figcaption>
-          </figure>
-
-          <figure class="image">
-            <img
-              src="images/AIDED_multitrack.png"
-              alt="Multi-track deposition optimization in AIDED"
-              style="width:523px;height:251px;"
-            />
-            <figcaption>
-              Machine learning model performance in predicting multi-track melt pool cross-sections.
-            </figcaption>
-          </figure>
-
-          <figure class="image">
-            <img
-              src="images/AIDED_multilayer.png"
-              alt="Multi-layer build optimization in AIDED"
-              style="width:523px;height:251px;"
-            />
-            <figcaption>
-              AIDED framework performance in predicting multi-layer melt pool cross-sections.
-            </figcaption>
-          </figure>
-
-        </div>
-
+    <div class="feature" id="agents">
+      <figure class="feature-media"><img src="images/work/agents_disk.jpg" alt="Turbine disk designed by an AI agent team: CAD cutaway and FEA stress map" /><figcaption>Feasibility run: a turbine disk designed, modelled in CAD and analysed in FEA by the agent team.</figcaption></figure>
+      <div>
+        <span class="pill ongoing">MIT &middot; AI for engineering</span>
+        <h3>Agentic AI engineers</h3>
         <p>
-          Please check out the published paper: <br>
-          <b>Shang, X.</b>, ..., &amp; Zou, Y. (2025). Accurate Inverse process optimization framework in laser Directed Energy Deposition. 
-          <a href="https://doi.org/10.1016/j.addma.2025.104736" target="_blank" rel="noopener">Additive Manufacturing</a>
+          Can a team of AI agents take a physical, safety-critical engineering system from a design brief to a hardware test, and how
+          does it compare with human teams who use AI as a copilot? I am building a head-to-head study around an MIT design&ndash;build&ndash;test
+          challenge. The agents handle design, analysis, CAD, simulation and procurement; humans only execute, and every human input is logged.
         </p>
+        <ul>
+          <li>Metrics: outcome, time per stage, rework, cost and every human intervention.</li>
+          <li>In an early feasibility run, a five-agent team (lead, designer, CAD, FEA and an independent verifier) operated commercial CAD and FEA software by itself to design a turbine disk from a written brief.</li>
+        </ul>
+      </div>
+    </div>
 
-      </section>
-    </article>
+    <div class="feature flip" id="magnetic">
+      <figure class="feature-media"><img src="images/work/mag_xray.webp" alt="Synchrotron X-ray video of an IN718 melt pool under a magnetic field" /><figcaption>In-situ synchrotron X-ray imaging of an IN718 melt pool on 316L under a magnetic field.</figcaption></figure>
+      <div>
+        <span class="pill ongoing">UCL &middot; manuscript in preparation</span>
+        <h3>Magnetic fields as a melt-pool actuator</h3>
+        <p>
+          A static magnetic field adds a new force inside the melt pool: thermoelectric currents at the solid&ndash;liquid boundary interact with
+          the field and drive flow exactly where the microstructure forms. With Prof. Peter D. Lee at University College London, I used
+          in-situ synchrotron X-ray imaging to watch DED of 316L stainless steel and IN718 under a magnetic field.
+        </p>
+        <ul>
+          <li>Direct evidence of thermoelectric magnetohydrodynamic (TEMHD) flow in DED.</li>
+          <li>Next: use the field as an extra control input for melt-pool shape, dilution and microstructure.</li>
+        </ul>
+      </div>
+    </div>
 
+    <div class="feature" id="closedloop">
+      <figure class="feature-media"><img src="images/work/closed_loop_compare.jpg" alt="The same turbine-sector part built without and with closed-loop control" /><figcaption>The same turbine-sector part built without (left) and with (right) closed-loop control.</figcaption></figure>
+      <div>
+        <span class="pill ongoing">U of T &middot; manuscript and patent application in preparation</span>
+        <h3>Deep-learning closed-loop control of DED</h3>
+        <p>
+          Open-loop DED drifts as heat builds up in the part. On the DED platform I built at the University of Toronto, a deep-learning model reads
+          images of the build and adjusts laser power on the fly to keep each track on target.
+        </p>
+        <ul>
+          <li>1st Place, ASM International IMAT Materials Venture Challenge (2025).</li>
+          <li>Funded in part by a Connaught Innovation Award (2023).</li>
+        </ul>
+        <span class="pill">AI: learned feedback control</span>
+      </div>
+    </div>
+
+    <div class="feature flip" id="radial">
+      <figure class="feature-media"><img src="images/work/radial_impact.jpg" alt="Radial bi-metallic samples after split-Hopkinson impact and stress-strain curves" /><figcaption>Radial bi-metallic samples after split-Hopkinson bar impact, and their dynamic stress&ndash;strain curves.</figcaption></figure>
+      <div>
+        <span class="pill ongoing">U of T &middot; manuscript submitted</span>
+        <h3>Radial bi-metals under ultra-high-speed impact</h3>
+        <p>
+          Strength and ductility usually trade off, and the trade-off is harshest under impact. Building on the confined-necking
+          mechanism, I designed radial bi-metallic architectures made by DED that overcome the strength&ndash;ductility trade-off under
+          ultra-high-speed impact.
+        </p>
+        <ul>
+          <li>Presented at the 155th TMS Annual Meeting (2026).</li>
+        </ul>
+      </div>
+    </div>
   </div>
 </section>
 
-<section id="main">
-  <div class="container">
-    <article class="box post">
-      <header>
-        <h2 id="tailor3Dms">Tailoring the mechanical properties of 3D microstrutures</h2>
-        <p>Associated with <a href="https://www.zou-mse-utoronto-ca.net/" target="_blank" rel="noopener">LEMAM @ UofT</a></p>
-      </header>
-
-      <br>
-      <a class="image featured"><img src="images/acposter.jpg" alt="" /></a>
-
-      <p>
-        Application-specific materials-by-design is a long-standing challenge due to the need for capturing the complex process-microstructure-property (P-S-P) relations.
-        The efficient identification of microstructures inversely from target mechanical properties is intractable because of the high dimensionality of the design space.
-        So far, there has only been limited preliminary investigations on establishing surrogation P-S-P models with over-simplified material representations forwardly
-        (as opposite to inverse design). For the arguably more important inverse design problem, there have been even fewer reports. In this work, we provide an <b>end-to-end</b>
-        framework that tackles both forward prediction and inverse exploration to streamline materials-by-design. Using <b>advanced deep-learning</b> and <b>genetic algorithm</b>,
-        our framework exhibits promising potential in cutting down the time needed from target mechanical properties <b>directly</b> to desired material microstructure.
-      </p>
-
-      <p>
-        <b>Our poster won a <a href="aboutme.html#2023acposteraward">poster prize award</a> from Digital Discovery at the
-        <a href="https://www.accelerate23.ca/" target="_blank" rel="noopener">2023 Accelerate Conference</a> by the
-        <a href="https://acceleration.utoronto.ca/" target="_blank" rel="noopener">Acceleration Consortium!</a></b>
-      </p>
-
-      <p>
-        Please check out the published paper: <br>
-        <b>Shang, X.</b>, Liu, Z., Zhang, J., Lyu, T., &amp; Zou, Y. (2023). Tailoring the mechanical properties of 3D microstructures:
-        A deep learning and genetic algorithm inverse optimization framework.
-        <a href="https://doi.org/10.1016/j.mattod.2023.09.007" target="_blank" rel="noopener">Materials Today</a>
-      </p>
-    </article>
+<div class="container" id="published">
+  <div style="padding-top:72px;">
+    <span class="eyebrow">Published</span>
+    <h2>Published projects</h2>
   </div>
-</section>
 
-<section id="main">
-  <div class="container">
-    <article class="box post">
-      <header>
-        <h2 id="mfm">Additive Manufacturing of Multimetallic Materials to Achieve Multifunctionality</h2>
-        <p>Associated with <a href="https://www.zou-mse-utoronto-ca.net/" target="_blank" rel="noopener">LEMAM @ UofT</a></p>
-      </header>
-
-      <br>
-      <figure class="image featured">
-        <img
-          src="images/MFM_overview.png"
-          alt="Overview of the multi-functional metal component"
-          style="width:360px;height:360px;"
-        />
-        <figcaption>
-          Overview of the multi-functional metal component (MFM) concept
-        </figcaption>
+  <article class="project" id="ded">
+    <h2>Custom directed energy deposition (DED) system and closed-loop control</h2>
+    <p class="assoc">Laboratory for Extreme Mechanics &amp; Additive Manufacturing, University of Toronto</p>
+    <p>
+      I led the design and construction of a full-size DED system from scratch. It has a 1 kW IPG fiber laser, two powder hoppers
+      for multi-material deposition, and a user-friendly control interface, and it prints 316L and 17-4PH stainless steels,
+      nickel superalloys and more. A CCD camera and a high-speed infrared camera monitor the melt pool in situ.
+    </p>
+    <p>
+      On this platform we built an AI-powered closed-loop controller that reads images of the build and adjusts laser power on the fly,
+      keeping the deposit on target where an open-loop process drifts.
+    </p>
+    <div class="key">
+      <b>Recognition:</b> 1st Place, ASM International IMAT Materials Venture Challenge (2025); Connaught Innovation Award (2023).
+      Manuscript and US patent application in preparation.
+    </div>
+    <div class="figs">
+      <figure>
+        <img src="images/work/ded_machine_overview.jpg" alt="Custom directed energy deposition system" loading="lazy" />
+        <figcaption>The custom multi-material DED system.</figcaption>
       </figure>
-
-      <figure class="image featured">
-        <img
-          src="images/MFM_qr.png"
-          alt="Embedded QR code in metal component fabricated by DED"
-          style="width:720px;height:360px;"
-        />
-        <figcaption>
-          Embedded QR code within a metal component fabricated by DED with two data densities.
-        </figcaption>
+      <figure>
+        <img src="images/work/ded_setup.jpg" alt="Deposition head, powder nozzles and monitoring camera inside the build chamber" loading="lazy" />
+        <figcaption>Deposition head and in-situ monitoring camera inside the build chamber.</figcaption>
       </figure>
-
-      <p>
-        Multifunctional materials (MFMs) exhibit multiple useful functions without complex joint mechanisms. Compared with soft MFMs, metallic MFMs are desired due to their superior mechanical properties and durability. However, the design and fabrication of MFMs are daunting tasks, requiring the organic integration of multiple metals and alloys during manufacturing processes. Additive manufacturing, especially directed energy deposition (DED), has the potential in this regard due to its capability to deposit multimaterials site-specifically. Through carefully programmed printing paths, novel applications arise and achieve functionalities unseen before. Here, we showcase the versatility of such techniques by four case studies of metallic MFMs: (i) tuning magnetic lifting force, (ii) securely and durably embedding information as material fingerprints, (iii) improving conventional ferrofluidic seals, and (iv) possessing programmable mechanical properties. This work demonstrates the possibilities of using DED to achieve multifunctionalities in metallic materials and provides enlightenment to a wide range of engineering applications.
-      </p>
-
-      <p>
-        Please check out the published paper: <br>
-        <b>Shang, X.</b>, ..., &amp; Zou, Y. (2026). Additive Manufacturing of Multimetallic Materials to Achieve Multifunctionality.
-        <a href="https://doi.org/10.1002/metm.70032" target="_blank" rel="noopener">MetalMat</a>
-      </p>
-
-    </article>
-  </div>
-</section>
-
-<section id="main">
-  <div class="container">
-    <article class="box post">
-      <header>
-        <h2 id="acta_fgm">Confined necking and improved tensile ductility in heterostructured bi-metallic steels made by additive manufacturing</h2>
-        <p>Associated with <a href="https://www.zou-mse-utoronto-ca.net/" target="_blank" rel="noopener">LEMAM @ UofT</a></p>
-      </header>
-
-      <br>
-      <figure class="image featured">
-        <img
-          src="images/Acta_FGM.png"
-          alt="Overview of the deformation mechanism in mesoscale heterostructured steels by DED"
-          style="width:360px;height:360px;"
-        />
-        <figcaption>
-          Overview of the deformation mechanism in mesoscale heterostructured steels by DED.
-        </figcaption>
+      <figure>
+        <img src="images/thumbs/ded_inside.webp" alt="DED build chamber interior during automated printing" loading="lazy" />
+        <figcaption>Automated printing and image capture inside the build chamber.</figcaption>
       </figure>
-
-      <figure class="image featured">
-        <img
-          src="images/Acta_confinednecking.png"
-          alt="Illustration of the confined necking co-deformation mechanism."
-          style="width:720px;height:360px;"
-        />
-        <figcaption>
-          Illustration of the confined necking co-deformation mechanism.
-        </figcaption>
+      <figure class="wide">
+        <img src="images/thumbs/clc.webp" alt="Deposition with and without AI closed-loop control" loading="lazy" />
+        <figcaption>Deposition with (left) and without (right) AI-powered closed-loop control.</figcaption>
       </figure>
+    </div>
+  </article>
 
-      <p>
-        In this work, we employ the AM method to fabricate a new type of mesoscale HM: bi-metallic heterostructured steels (HSs), consisting of 316L and PH17–4 stainless steels that possess distinct tensile strength and ductility. By tuning the ratios and fractions of 316L/PH17–4, we achieve 27.3%, 11.5%, and 1.8% improvements in the tensile ductility, ultimate tensile strength, and yield strength over 316L, respectively. Such enhanced tensile properties are mainly attributed to (i) confined-necking co-deformation, where the necking of PH17–4 is confined and delayed by 316L, offering more work hardening to the whole sample, (ii) switching between necking-induced and shear-induced failure modes, and (iii) the HDI hardening effect. This study paves the way for understanding and designing bi-metallic HSs with improved tensile properties using AM methods.
-      </p>
+  <article class="project" id="ded_opt">
+    <h2>AIDED: accurate inverse process optimization for laser DED</h2>
+    <p class="assoc">Laboratory for Extreme Mechanics &amp; Additive Manufacturing, University of Toronto</p>
+    <p>
+      Finding good process parameters for DED, and for additive manufacturing in general, is slow and expensive, yet it decides
+      build quality, cost and material waste. AIDED uses machine learning to predict melt-pool and track geometry from process
+      parameters, and a genetic algorithm to search inversely for the parameters that give a target geometry, from single tracks
+      to multi-track layers and multi-layer builds.
+    </p>
+    <div class="figs">
+      <figure>
+        <img src="images/thumbs/aided.jpg" alt="AIDED framework overview" loading="lazy" />
+        <figcaption>AIDED framework overview.</figcaption>
+      </figure>
+      <figure>
+        <img src="images/AIDED_singletrack.png" alt="Single-track melt pool prediction" loading="lazy" />
+        <figcaption>Predicting single-track melt-pool cross-sections.</figcaption>
+      </figure>
+      <figure>
+        <img src="images/AIDED_multitrack.png" alt="Multi-track melt pool prediction" loading="lazy" />
+        <figcaption>Predicting multi-track cross-sections.</figcaption>
+      </figure>
+      <figure>
+        <img src="images/AIDED_multilayer.png" alt="Multi-layer build prediction" loading="lazy" />
+        <figcaption>Predicting multi-layer builds.</figcaption>
+      </figure>
+    </div>
+    <p>
+      <b>Shang, X.</b>, Talbot, A., Li, E., Wen, H., Lyu, T., Zhang, J., &amp; Zou, Y. (2025). Accurate inverse process optimization framework in laser directed energy deposition.
+      <a href="https://doi.org/10.1016/j.addma.2025.104736" target="_blank" rel="noopener"><i>Additive Manufacturing</i>, 102, 104736</a>.
+      &nbsp;<a href="https://github.com/xshang93/AIDED" target="_blank" rel="noopener"><i class="fab fa-github"></i> Code</a>
+    </p>
+  </article>
 
-      <p>
-        Please check out the published paper: <br>
-        <b>Shang, X.</b>, ..., &amp; Zou, Y. (2026). Confined necking and improved tensile ductility in heterostructured bi-metallic steels made by additive manufacturing.
-        <a href="https://doi.org/10.1016/j.actamat.2026.121952" target="_blank" rel="noopener">Acta Materialia</a>
-      </p>
+  <article class="project" id="acta_fgm">
+    <h2>Confined necking and improved tensile ductility in heterostructured bi-metallic steels</h2>
+    <p class="assoc">Laboratory for Extreme Mechanics &amp; Additive Manufacturing, University of Toronto</p>
+    <p>
+      Using DED, we made a new type of mesoscale heterostructured material: bi-metallic steels that combine 316L and 17-4PH stainless
+      steels, which have very different strength and ductility. By tuning the ratio and arrangement of the two steels, we improved
+      tensile ductility, ultimate tensile strength and yield strength over 316L by 27.3%, 11.5% and 1.8%, respectively. The gains come from
+      (i) <b>confined-necking co-deformation</b>, where 316L confines and delays the necking of 17-4PH and gives the whole sample more work hardening;
+      (ii) a switch between necking-induced and shear-induced failure; and (iii) hetero-deformation-induced (HDI) hardening.
+    </p>
+    <div class="figs">
+      <figure>
+        <img src="images/thumbs/acta_fgm.jpg" alt="Deformation mechanisms in mesoscale heterostructured steels" loading="lazy" />
+        <figcaption>Deformation mechanisms in mesoscale heterostructured steels made by DED.</figcaption>
+      </figure>
+      <figure>
+        <img src="images/Acta_confinednecking.png" alt="Confined necking co-deformation mechanism" loading="lazy" />
+        <figcaption>The confined-necking co-deformation mechanism.</figcaption>
+      </figure>
+    </div>
+    <p>
+      <b>Shang, X.</b>, Dash, S. S., Shao, C., Lang, L., &hellip; &amp; Zou, Y. (2026). Confined necking and improved tensile ductility in heterostructured bi-metallic steels made by additive manufacturing.
+      <a href="https://doi.org/10.1016/j.actamat.2026.121952" target="_blank" rel="noopener"><i>Acta Materialia</i>, 121952</a>.
+    </p>
+  </article>
 
-    </article>
-  </div>
-</section>
+  <article class="project" id="mfm">
+    <h2>Additive manufacturing of multi-metallic materials for multifunctionality</h2>
+    <p class="assoc">Laboratory for Extreme Mechanics &amp; Additive Manufacturing, University of Toronto</p>
+    <p>
+      Multifunctional materials perform several useful functions without complex joints. Metallic ones are attractive for their strength
+      and durability but hard to design and make, because several metals must be integrated during manufacturing. DED can deposit
+      different alloys exactly where they are needed. With carefully programmed toolpaths, we demonstrated four multifunctional metal parts:
+      (i) tunable magnetic lifting force, (ii) information embedded securely and durably as a material fingerprint, (iii) improved
+      ferrofluidic seals, and (iv) programmable mechanical properties. Two US patent applications arose from this work.
+    </p>
+    <div class="figs">
+      <figure>
+        <img src="images/thumbs/mfm_overview.jpg" alt="Overview of multifunctional multi-metallic parts" loading="lazy" />
+        <figcaption>Four multifunctional multi-metal parts made by DED.</figcaption>
+      </figure>
+      <figure>
+        <img src="images/thumbs/mfm_qr.webp" alt="Decoding a QR code embedded in a metal part" loading="lazy" />
+        <figcaption>Reading a QR code embedded inside a metal part made by DED.</figcaption>
+      </figure>
+    </div>
+    <p>
+      <b>Shang, X.</b>, Li, E., Dash, S. S., Talbot, A., &amp; Zou, Y. (2026). Additive manufacturing of multi-metallic materials to achieve multi-functionality.
+      <a href="https://doi.org/10.1002/metm.70032" target="_blank" rel="noopener"><i>MetalMat</i>, 3(1), e70032</a>.
+    </p>
+  </article>
 
-<section id="main">
-  <div class="container">
-    <article class="box post">
-      <header>
-        <h2 id="bam">Durable bistable auxetics made of rigid solids</h2>
-        <p>Associated with <a href="http://pasini.ca/" target="_blank" rel="noopener">Pasini Grounp @ McGill University</a></p>
-      </header>
+  <article class="project" id="tailor3Dms">
+    <h2>Tailoring the mechanical properties of 3D microstructures</h2>
+    <p class="assoc">Laboratory for Extreme Mechanics &amp; Additive Manufacturing, University of Toronto</p>
+    <p>
+      Designing a material for a specific application requires capturing complex process&ndash;structure&ndash;property relationships.
+      Finding microstructures inversely from target mechanical properties is especially hard because the design space is so large.
+      We built an <b>end-to-end</b> framework that handles both forward prediction and inverse search: a 3D convolutional neural network
+      predicts stress&ndash;strain response from a 3D microstructure, and a genetic algorithm searches for microstructures that meet
+      target properties, cutting the time from target properties to a candidate microstructure.
+    </p>
+    <div class="figs">
+      <figure>
+        <img src="images/thumbs/tailor_ms.jpg" alt="Deep learning and genetic algorithm inverse design framework" loading="lazy" />
+        <figcaption>The deep learning + genetic algorithm framework.</figcaption>
+      </figure>
+      <figure>
+        <img src="images/thumbs/acposter.jpg" alt="Poster presented at the Accelerate 2023 conference" loading="lazy" />
+        <figcaption>This poster won a <i>Digital Discovery</i> Poster Prize at Accelerate 2023.</figcaption>
+      </figure>
+    </div>
+    <p>
+      <b>Shang, X.</b>, Liu, Z., Zhang, J., Lyu, T., &amp; Zou, Y. (2023). Tailoring the mechanical properties of 3D microstructures: A deep learning and genetic algorithm inverse optimization framework.
+      <a href="https://doi.org/10.1016/j.mattod.2023.09.007" target="_blank" rel="noopener"><i>Materials Today</i>, 70, 71&ndash;81</a>.
+      &nbsp;<a href="https://github.com/xshang93/MsInverseDesign" target="_blank" rel="noopener"><i class="fab fa-github"></i> Code</a>
+    </p>
+  </article>
 
-      <br>
-      <a class="image featured"><img src="images/bam.gif" alt="" /></a>
+  <article class="project" id="bam">
+    <h2>Durable bistable auxetics made of rigid solids</h2>
+    <p class="assoc"><a href="http://pasini.ca/" target="_blank" rel="noopener">Pasini Group</a>, McGill University</p>
+    <p>
+      Bistable auxetic metamaterials (BAMs) are perforated periodic structures with a negative Poisson's ratio. Under tension, a BAM expands
+      to a second stable state through a large shape change, which normally relies on a soft elastomer; made from a rigid polymer or a metal,
+      its ligaments rupture. We extended the BAM architecture to rigid base materials and used experiments and simulations to assess
+      performance, bistability and durability over 10,000 cycles. Geometric maps show how the main architectural descriptors control behaviour,
+      opening BAMs to a wide range of materials, including elastic&ndash;perfectly plastic and potentially brittle ones.
+    </p>
+    <div class="figs">
+      <figure>
+        <img src="images/thumbs/bam.webp" alt="Bistable auxetic metamaterials made of soft and rigid materials" loading="lazy" />
+        <figcaption>Bistable auxetics made of soft (left) and rigid (right) base materials.</figcaption>
+      </figure>
+    </div>
+    <p>
+      <b>Shang, X.</b>, Liu, L., Rafsanjani, A., &amp; Pasini, D. (2018). Durable bistable auxetics made of rigid solids.
+      <a href="https://doi.org/10.1557/jmr.2017.417" target="_blank" rel="noopener"><i>Journal of Materials Research</i>, 33, 300&ndash;308</a>.
+      Featured in <a href="https://www.cambridge.org/core/journals/mrs-bulletin/news/kirigami-art-and-geometric-manipulation-transform-rigid-solids-to-flexible-auxetic-materials" target="_blank" rel="noopener"><i>MRS Bulletin</i></a>.
+      US Patent 10,767,032.
+    </p>
+  </article>
 
-      <p>
-        Bistable Auxetic Metamaterials (BAMs) are a class of monolithic perforated periodic structures with negative Poisson’s ratio. Under tension, a BAM can expand and reach a second state of equilibrium through a globally large shape transformation that is ensured by the flexibility of its elastomeric base material. However, if made from a rigid polymer, or metal, BAM ceases to function due to the inevitable rupture of its ligaments. The goal of this work is to extend the unique functionality of the original kirigami architecture of BAM to a rigid solid base material. We use experiments and numerical simulations to assess performance, bistability, and durability of rigid BAMs at 10,000 cycles. Geometric maps are presented to elucidate the role of the main descriptors of the BAM architecture. The proposed design enables the realization of BAM from a large palette of materials, including elastic-perfectly plastic materials and potentially brittle materials.
-      </p>
-
-      <p>
-        To find our more about this work: <br>
-        <b>Shang, X.</b>, Liu, L., Rafsanjani, A. et al. Durable bistable auxetics made of rigid solids. Journal of Materials Research 33, 300–308 (2018).
-        https://doi.org/10.1557/jmr.2017.417.
-        <a href="https://www.researchgate.net/publication/320875170_Durable_Bistable_Auxetics_Made_of_Rigid_Solids" target="_blank" rel="noopener">Full-text paper</a>
-        <br>
-        Featured in the <a href="https://www.cambridge.org/core/journals/mrs-bulletin/news/kirigami-art-and-geometric-manipulation-transform-rigid-solids-to-flexible-auxetic-materials" target="_blank" rel="noopener">MRS Bulletin</a>
-      </p>
-    </article>
-  </div>
-</section>
+</div>

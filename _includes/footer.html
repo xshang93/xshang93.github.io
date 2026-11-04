@@ -1,77 +1,36 @@
 <!-- Footer -->
-    <section id="footer">
-        <div class="container">
-            <div class="row">
-                <div class="col-8 col-12-medium">
-                    <section>
-                        <header>
-                            <h2>News</h2>
-                        </header>
-                        <ul class="dates">
-                            <li>
-                                <span class="date">Jan <strong>20</strong></span>
-                                <h3><a href="projects.html#acta_fgm">New work published in <i>Acta Materialia</i>, 2026</a></h3>
-                                <p>My new work is published in the prestigious journal <a href="https://doi.org/10.1016/j.actamat.2026.121952" target="_blank" rel="noopener">Acta Materialia</a>!</p>
-                            </li>										
-                            <li>
-                                <span class="date">Jan <strong>27</strong></span>
-                                <h3><a href="projects.html#mfm">New work published in <i>MetalMat</i>, 2026</a></h3>
-                                <p>My new work is published in the journal <a href="https://doi.org/10.1002/metm.70032" target="_blank" rel="noopener">MetalMat</a>.</p>
-                            </li>
-                            <li>
-                                <span class="date">Jan <strong>13</strong></span>
-                                <h3><a href="aboutme.html#awards">DND/NSERC supplemental funding award, 2026</a></h3>
-                                <p>I am awarded the prestigious Canada DND/NSERC supplemental funding award by The Natural Sciences and Engineering Research Council of Canada (NSERC)!</p>
-                            </li>	
-                            <li>
-                                <span class="date">Oct <strong>22</strong></span>
-                                <h3><a href="projects.html#ded">1st place in the ASM International IMAT Materials Venture Challenge, 2025</a></h3>
-                                <p>Our closed-loop control DED invention won the 1st place at the <a href="https://www.asminternational.org/imat/?srsltid=AfmBOoo5nn7i8rgOl5xhRCf_AhgKy-n2u8mQs8ktV50p75ifgTSFcNmy" target="_blank">ASM International IMAT Materials Venture Challenge</a>!</p>
-                            </li>
-                            <li>
-                                <span class="date">Aug <strong>27</strong></span>
-                                <h3><a >Joseph R. Benedetto Scholarship by the Society of Manufacturing Engineers (SME), 2025</a></h3>
-                                <p>I am among the three Joseph R. Benedetto Scholarship winners selected by the Society of Manufacturing Engineers (SME) Toronto Chapter 26!</p>
-                            </li>
-                    </section>
-                </div>
-                <div class="col-4 col-12-medium">
-                    <section>
-                        <header>
-                            <h2>Getting in touch</h2>
-                        </header>
-                        <ul class="social">
-                            <li><a class="icon brands fa-linkedin-in" style="color: #000000;" href="https://www.linkedin.com/in/xiaos/" target="_blank"></a></li>
-                            <li><a class="icon brands fa-google" href="https://scholar.google.com/citations?user=dkTMoJQAAAAJ&hl=en" target="_blank"></a></li>
-                            <li><a class="icon brands fa-github" href="https://github.com/xshang93" target="_blank"></a></li>
-                            <li><a class="icon brands fa-twitter" href="https://twitter.com/93xshang" target="_blank"></a></li>
-                        </ul>
-                        <ul class="contact">
-                            <li>
-                                <h3>Address</h3>
-                                <p>
-                                    University of Toronto<br />
-                                    Department of Materials Science and Engineering<br />
-                                    Toronto, ON, Canada
-                                </p>
-                            </li>
-                            <li>
-                                <h3>Mail</h3>
-                                <p><a href="#">xiao dot shang at mail.utoronto.ca</a></p>
-                            </li>
-                        </ul>
-                    </section>
-                </div>
-                <div class="col-12">
-
-                    <!-- Copyright -->
-                        <div id="copyright">
-                            <ul class="links">
-                                <li>&copy; Xiao Shang 2023. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-                            </ul>
-                        </div>
-
-                </div>
-            </div>
-        </div>
-    </section>
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h4>Xiao Shang, PhD, P.Eng.</h4>
+        <p>
+          Postdoctoral Researcher<br />
+          Department of Mechanical Engineering &amp;<br />
+          Department of Aeronautics and Astronautics<br />
+          Massachusetts Institute of Technology, Cambridge, MA, USA
+        </p>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <p>xshang [at] mit [dot] edu</p>
+        <ul class="clean social">
+          <li><a href="https://scholar.google.com/citations?user=dkTMoJQAAAAJ&hl=en" target="_blank" rel="noopener" aria-label="Google Scholar"><i class="fab fa-google"></i></a></li>
+          <li><a href="https://www.linkedin.com/in/xiaos/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a></li>
+          <li><a href="https://github.com/xshang93" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a></li>
+          <li><a href="https://twitter.com/93xshang" target="_blank" rel="noopener" aria-label="Twitter"><i class="fab fa-twitter"></i></a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Quick links</h4>
+        <p>
+          <a href="{{ '/research.html' | relative_url }}">Research vision</a><br />
+          <a href="{{ '/publications.html' | relative_url }}">Publications</a><br />
+          <a href="{{ '/files/cv.pdf' | relative_url }}" target="_blank" rel="noopener">Curriculum vitae (PDF)</a><br />
+          <a href="{{ '/creditor/' | relative_url }}">CRediTor web app</a>
+        </p>
+      </div>
+    </div>
+    <div class="copyright">&copy; {{ site.time | date: '%Y' }} Xiao Shang. Last updated {{ site.time | date: '%B %Y' }}.</div>
+  </div>
+</footer>

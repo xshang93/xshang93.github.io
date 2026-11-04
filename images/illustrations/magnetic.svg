@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" font-family="Inter, Segoe UI, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1">
+      <stop offset="0" stop-color="#eef1f5"/>
+      <stop offset=".5" stop-color="#f7f8fa"/>
+      <stop offset="1" stop-color="#eef1f5"/>
+    </linearGradient>
+    <radialGradient id="pool" cx="50%" cy="0%" r="100%">
+      <stop offset="0" stop-color="#fff3c4"/>
+      <stop offset=".35" stop-color="#ffb347"/>
+      <stop offset=".8" stop-color="#ff5a00"/>
+      <stop offset="1" stop-color="#b91c1c"/>
+    </radialGradient>
+    <linearGradient id="beam" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0" stop-color="#ff7a1a" stop-opacity="0"/>
+      <stop offset="1" stop-color="#ff7a1a"/>
+    </linearGradient>
+    <linearGradient id="xray" x1="0" x2="1">
+      <stop offset="0" stop-color="#0891b2" stop-opacity="0"/>
+      <stop offset=".2" stop-color="#0891b2" stop-opacity=".18"/>
+      <stop offset=".8" stop-color="#0891b2" stop-opacity=".18"/>
+      <stop offset="1" stop-color="#0891b2" stop-opacity="0"/>
+    </linearGradient>
+    <marker id="a" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0 0 L10 5 L0 10 Z" fill="#fff"/>
+    </marker>
+  </defs>
+  <rect width="480" height="300" fill="url(#bg)"/>
+  <!-- magnets -->
+  <g font-size="22" font-weight="700" text-anchor="middle">
+    <rect x="26" y="110" width="56" height="110" rx="6" fill="#dc2626"/><text x="54" y="172" fill="#fff">N</text>
+    <rect x="398" y="110" width="56" height="110" rx="6" fill="#2563eb"/><text x="426" y="172" fill="#fff">S</text>
+  </g>
+  <!-- field lines -->
+  <g stroke="#94a3b8" stroke-opacity=".5" fill="none" stroke-dasharray="5 5">
+    <path d="M82 130 H398"/><path d="M82 165 H398"/><path d="M82 200 H398"/>
+  </g>
+  <text x="130" y="122" text-anchor="middle" font-size="14" font-style="italic" fill="#475569">B</text>
+  <!-- X-ray beam -->
+  <rect x="0" y="150" width="480" height="34" fill="url(#xray)"/>
+  <!-- substrate + pool -->
+  <rect x="120" y="190" width="240" height="60" fill="#475569"/>
+  <path d="M180 190 Q240 260 300 190 Z" fill="url(#pool)"/>
+  <rect x="120" y="180" width="240" height="10" fill="#64748b"/>
+  <path d="M180 190 Q240 260 300 190" fill="none" stroke="#fde68a" stroke-opacity=".6"/>
+  <!-- flow loops -->
+  <g stroke="#fff" stroke-width="1.8" fill="none" marker-end="url(#a)">
+    <path d="M222 200 C 200 205, 205 228, 226 226"/>
+    <path d="M258 226 C 278 228, 282 205, 260 200"/>
+  </g>
+  <!-- laser -->
+  <rect x="236" y="30" width="8" height="160" fill="url(#beam)"/>
+  <g font-size="12" fill="#1f2937">
+    <text x="296" y="145" fill="#0891b2">in-situ X-ray</text>
+    <text x="150" y="275" fill="#5f6878">thermoelectric MHD flow reshapes the melt pool</text>
+  </g>
+  <text x="20" y="24" font-size="11" fill="#5f6878">Schematic: magnetic-field-assisted DED under synchrotron X-ray</text>
+</svg>

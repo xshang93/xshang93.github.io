@@ -1,76 +1,26 @@
 <!-- Header -->
-<section id="header">
+<header class="site-header">
+  <div class="container">
+    <a class="brand" href="{{ '/' | relative_url }}"><span class="mark">XS</span>Xiao Shang<small>PhD, P.Eng.</small></a>
 
-  <!-- Logo -->
-  <h1>
-    <a href="{{ '/index.html' | relative_url }}">
-      Xiao Shang <span style="font-size: 0.6em;">P.Eng.</span>
-    </a>
-  </h1>
+    <div class="header-tools">
+      <button class="theme-toggle" type="button" aria-label="Switch between light and dark mode" title="Light / dark mode">
+        <i class="fas fa-moon"></i><i class="fas fa-sun"></i>
+      </button>
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false"><i class="fas fa-bars"></i></button>
+    </div>
 
-  <!-- Nav -->
-  <nav id="nav">
-    <ul>
-      <li class="{% if page.nav == 'home' %}current{% endif %}">
-        <a href="{{ '/index.html' | relative_url }}">Home</a>
-      </li>
-
-      <li class="{% if page.nav == 'projects' %}current{% endif %}">
-        <a href="{{ '/projects.html' | relative_url }}">Projects</a>
-        <ul>
-          <li><a href="{{ '/projects.html#ded' | relative_url }}">Directed energy deposition</a></li>
-          <li><a href="{{ '/projects.html#tailor3Dms' | relative_url }}">Materials-by-design</a></li>
-          <li><a href="{{ '/projects.html#ded_opt' | relative_url }}">AIDED framework</a></li>
-          <li><a href="{{ '/projects.html#mfm' | relative_url }}">Multifunctional metallic materials</a></li>
-          <li><a href="{{ '/projects.html#acta_fgm' | relative_url }}">Confined-necking co-deformation</a></li>
-          <li><a href="{{ '/projects.html#bam' | relative_url }}">Bisatble auxetics</a></li>
-        </ul>
-      </li>
-
-      <li>
-        <a href="https://scholar.google.com/citations?user=dkTMoJQAAAAJ&hl=en" target="_blank" rel="noopener">
-          Publications
-        </a>
-      </li>
-
-      <li>
-        <a href="#">My web apps</a>
-        <ul>
-          <li><a href="{{ '/creditor/' | relative_url }}">CRediTor - A tool for CRediT Statement generation</a></li>
-        </ul>
-      </li>
-
-      <li class="{% if page.nav == 'teaching' %}current{% endif %}">
-        <a href="{{ '/teaching&mentoring.html' | relative_url }}">Teaching &amp; Mentoring</a>
-      </li>
-
-      <li>
-        <a href="#">Media Coverage</a>
-        <ul>
-          <li><a href="https://news.engineering.utoronto.ca/this-machine-learning-method-aims-to-speed-up-the-design-of-next-generation-biomedical-implants-and-aerospace-materials/" target="_blank" rel="noopener">Deep learning work covered by UofT Engineering News</a></li>
-          <li><a href="https://mse.utoronto.ca/news/mse-student-xiao-shang-wins-the-poster-prize-at-the-accelerate-conference/" target="_blank" rel="noopener">Conference poster prize featured in UofT MSE news</a></li>
-          <li><a href="https://mse.utoronto.ca/news/mse-phd-candidates-were-interviewed-by-citynews/" target="_blank" rel="noopener">Interview by Toronto City News</a></li>
-          <li><a href="https://news.engineering.utoronto.ca/u-of-t-engineering-researchers-are-advancing-metal-3d-printing-technology-for-automotive-energy-and-biomedical-applications/" target="_blank" rel="noopener">Our additive manufacturing lab by UofT News</a></li>
-        </ul>
-      </li>
-
-      <li class="{% if page.nav == 'about' %}current{% endif %}">
-        <a href="{{ '/aboutme.html' | relative_url }}">About Me</a>
-        <ul>
-          <li><a href="{{ '/aboutme.html#education' | relative_url }}">Education &amp; Training</a></li>
-          <li><a href="{{ '/aboutme.html#awards' | relative_url }}">Awards</a></li>
-          <li><a href="{{ '/aboutme.html#cv' | relative_url }}">Curriculum Vitae</a></li>
-        </ul>
-      </li>
-
-      <li class="{% if page.nav == 'memes' %}current{% endif %}">
-        <a href="{{ '/memes.html' | relative_url }}">Memes for fun</a>
-      </li>
-    </ul>
-  </nav>
-
-  {% if page.nav == 'home' %}
-    {% include home-hero.html %}
-  {% endif %}
-
-</section>
+    <nav>
+      <ul class="nav" id="nav">
+        <li><a href="{{ '/' | relative_url }}" class="{% if page.nav == 'home' %}current{% endif %}">Home</a></li>
+        <li><a href="{{ '/research.html' | relative_url }}" class="{% if page.nav == 'research' %}current{% endif %}">Research</a></li>
+        <li><a href="{{ '/projects.html' | relative_url }}" class="{% if page.nav == 'projects' %}current{% endif %}">Projects</a></li>
+        <li><a href="{{ '/publications.html' | relative_url }}" class="{% if page.nav == 'publications' %}current{% endif %}">Publications</a></li>
+        <li><a href="{{ '/teaching.html' | relative_url }}" class="{% if page.nav == 'teaching' %}current{% endif %}">Teaching &amp; Mentoring</a></li>
+        <li><a href="{{ '/service.html' | relative_url }}" class="{% if page.nav == 'service' %}current{% endif %}">Service</a></li>
+        <li><a href="{{ '/aboutme.html' | relative_url }}" class="{% if page.nav == 'about' %}current{% endif %}">About</a></li>
+        <li><a href="{{ '/files/cv.pdf' | relative_url }}" class="cv-link" target="_blank" rel="noopener"><i class="fas fa-file-pdf"></i> CV</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>

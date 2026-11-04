@@ -1,1 +1,13 @@
 title: Xiao Shang
+description: Postdoctoral researcher at MIT working on metal additive manufacturing, in-process sensing and control, functionally graded metals, and AI for manufacturing.
+url: https://xshang93.github.io
+exclude:
+  - obs
+  - .spyproject
+  - README.txt
+  - LICENSE.txt
+  - images/figs.pptx
+  - left-sidebar.html
+  - right-sidebar.html
+  - no-sidebar.html
+  - index_old.html
