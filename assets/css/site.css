@@ -447,6 +447,8 @@ figure.feature-media { margin: 0; }
 .scale-step .icon img { width: 100%; height: 100%; object-fit: cover; border-radius: 50%; }
 .scale-step p.src { margin-top: 4px; font-size: .74rem; font-style: italic; color: var(--faint); }
 
-/* MIT logo beside the affiliation line (white on dark backgrounds) */
-.inst-logo { display: inline-block; height: 1.15em; width: auto; vertical-align: -0.2em; margin-left: 6px; }
-:root[data-theme="dark"] .inst-logo { filter: brightness(0) invert(1); }
+/* Institution logos under the affiliation line (MIT in white on dark backgrounds) */
+.inst-logos { display: flex; align-items: center; flex-wrap: wrap; gap: 28px; margin: -0.6em 0 1.6em; }
+.inst-logos img { height: 48px; width: auto; }
+:root[data-theme="dark"] .inst-logos img[src*="mit.svg"] { filter: brightness(0) invert(1); }
+@media (max-width: 600px) { .inst-logos { gap: 20px; } .inst-logos img { height: 36px; } }
