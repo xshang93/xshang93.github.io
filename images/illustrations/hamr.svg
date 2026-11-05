@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" font-family="Inter, Segoe UI, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0" stop-color="#f7f8fa"/>
+      <stop offset="1" stop-color="#eef1f5"/>
+    </linearGradient>
+    <pattern id="powder" width="8" height="8" patternUnits="userSpaceOnUse">
+      <rect width="8" height="8" fill="#6b7280"/>
+      <circle cx="4" cy="4" r="3.2" fill="#9ca3af"/>
+      <circle cx="3" cy="3" r="1" fill="#d1d5db"/>
+    </pattern>
+    <linearGradient id="heat" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0" stop-color="#ff5a00" stop-opacity="0"/>
+      <stop offset="1" stop-color="#ff5a00" stop-opacity=".55"/>
+    </linearGradient>
+    <linearGradient id="beam" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0" stop-color="#ff7a1a" stop-opacity="0"/>
+      <stop offset="1" stop-color="#ff7a1a"/>
+    </linearGradient>
+    <radialGradient id="glow">
+      <stop offset="0" stop-color="#fff3c4"/>
+      <stop offset=".4" stop-color="#ff9a3c"/>
+      <stop offset="1" stop-color="#ff5a00" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="480" height="300" fill="url(#bg)"/>
+  <!-- powder bed in perspective -->
+  <polygon points="60,190 420,190 460,250 20,250" fill="url(#powder)"/>
+  <polygon points="20,250 460,250 460,268 20,268" fill="#374151"/>
+  <rect x="20" y="268" width="440" height="20" fill="url(#heat)"/>
+  <!-- printed ink pattern (voxels) -->
+  <g opacity=".95">
+    <polygon points="120,200 170,200 176,212 122,212" fill="#22d3ee"/>
+    <polygon points="170,200 220,200 228,212 176,212" fill="#38bdf8"/>
+    <polygon points="220,200 270,200 280,212 228,212" fill="#818cf8"/>
+    <polygon points="122,212 176,212 182,226 124,226" fill="#22d3ee" opacity=".7"/>
+    <polygon points="176,212 228,212 236,226 182,226" fill="#818cf8" opacity=".8"/>
+    <polygon points="228,212 280,212 290,226 236,226" fill="#c084fc"/>
+    <polygon points="124,226 182,226 188,240 126,240" fill="#38bdf8" opacity=".6"/>
+    <polygon points="182,226 236,226 244,240 188,240" fill="#c084fc" opacity=".8"/>
+    <polygon points="236,226 290,226 300,240 244,240" fill="#e879f9"/>
+  </g>
+  <!-- inkjet head + gantry -->
+  <rect x="40" y="40" width="400" height="8" rx="3" fill="#475569"/>
+  <g transform="translate(150 48)">
+    <rect x="-26" y="0" width="52" height="34" rx="4" fill="#cbd5e1" stroke="#64748b"/>
+    <rect x="-6" y="34" width="12" height="12" fill="#94a3b8"/>
+    <text x="0" y="22" text-anchor="middle" font-size="11" font-weight="600" fill="#0f172a">INKJET</text>
+    <g fill="#22d3ee">
+      <circle cx="0" cy="62" r="3.2"/><circle cx="0" cy="84" r="3.2"/><circle cx="0" cy="106" r="3.2"/><circle cx="0" cy="128" r="3.2"/>
+    </g>
+  </g>
+  <!-- laser -->
+  <g transform="translate(330 48)">
+    <path d="M-14 0 H14 V22 L4 40 H-4 L-14 22 Z" fill="#cbd5e1" stroke="#64748b"/>
+    <text x="0" y="15" text-anchor="middle" font-size="9" font-weight="600" fill="#0f172a">LASER</text>
+    <polygon points="-3,40 3,40 -40,170 -46,170" fill="url(#beam)"/>
+    <circle cx="-43" cy="174" r="14" fill="url(#glow)"/>
+  </g>
+  <g font-size="12" fill="#1f2937">
+    <text x="182" y="120">nanoparticle ink</text>
+    <text x="182" y="136" fill="#5f6878">sets local composition</text>
+    <text x="24" y="182" fill="#5f6878">powder layer</text>
+    <text x="370" y="284" fill="#c2410c">heated bed</text>
+  </g>
+  <text x="20" y="24" font-size="11" fill="#5f6878">Schematic: hybrid inkjet + laser powder bed fusion</text>
+</svg>

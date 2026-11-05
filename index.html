@@ -12,12 +12,12 @@ nav: home
   <div class="container">
     <div class="hero-copy">
       <span class="eyebrow">AI-driven design &middot; Metal additive manufacturing</span>
-      <h1>Xiao Shang</h1>
+            <h1>Xiao Shang</h1>
       <p class="role">
         Postdoctoral Researcher, Massachusetts Institute of Technology<br />
         Mechanosynthesis Group (MechE) &amp; Gas Turbine Laboratory (AeroAstro)
       </p>
-      <p class="tagline">My research vision is for manufacturing to keep pace with AI design, so that every material and part that AI designs can be built <span class="grad-text">accurately, quickly and at a cost industry can use</span>.</p>
+      <p class="tagline">I want manufacturing to keep pace with AI design, so that what AI designs can be built <span class="grad-text">accurately, quickly and affordably</span>.</p>
 
       <div class="market"><span class="dot"></span>On the 2026&ndash;27 academic job market: tenure-track faculty positions</div>
 
@@ -37,99 +37,45 @@ nav: home
   </div>
 </section>
 
-<!-- The bottleneck -->
+<!-- Scale graphic -->
 <section class="section dark" style="padding-top:64px;">
   <div class="container">
     <div class="section-head" style="text-align:center;">
       <span class="eyebrow">Research vision</span>
       <h2>Overcoming the manufacturing bottleneck in AI-driven design</h2>
       <p style="margin:0 auto;">
-        AI now generates new alloys, architectures and parts far faster than any human team, and many of the most promising designs,
-        especially functionally graded parts, are best made by additive manufacturing (AM). Manufacturing has become the bottleneck,
-        from two sides. My planned <b>Additive Innovation and Artificial Intelligence (AI&sup2;) Lab</b> will remove it from both.
+        AI now designs new alloys and parts far faster than we can make them. My lab, the
+        <b>Additive Innovation and Artificial Intelligence (AI&sup2;) Lab</b>, will make AI designs buildable, and AM able to build them.
       </p>
     </div>
-
-    <div class="challenges">
-      <div class="challenge">
-        <span class="num">Challenge 1</span>
-        <h3>AI design ignores manufacturability</h3>
-        <p>Generative and agentic AI push performance, but rarely account for what a metal AM machine can build, or at what cost.</p>
-        <div class="proj">
-          <div class="id">1.1</div>
-          <div>
-            <h4>Process- and cost-aware AI design</h4>
-            <p>Process and cost models constrain geometry and composition while the design is generated, not afterwards.</p>
-            <span class="pill">AI: generative design + uncertainty-aware process models</span>
-          </div>
-        </div>
-        <div class="proj">
-          <div class="id">1.2</div>
-          <div>
-            <h4>Composition-aware toolpath planning</h4>
-            <p>Plans where each material ends up, how heat builds up and how long the build takes, not just geometry.</p>
-            <span class="pill">AI: multi-objective Bayesian optimization + ML surrogates + agentic AI</span>
-          </div>
-        </div>
-      </div>
-      <div class="challenge">
-        <span class="num">Challenge 2</span>
-        <h3>AM cannot build AI designs accurately or quickly enough</h3>
-        <p>AI completes a design iteration in hours, while building the part still takes weeks to months.</p>
-        <div class="proj">
-          <div class="id">2.1</div>
-          <div>
-            <h4>Transferable AI process-optimization models</h4>
-            <p>Models that carry over to new compositions, machines and AM processes with few new experiments.</p>
-            <span class="pill">AI: physics-informed learning + transfer learning + active learning</span>
-          </div>
-        </div>
-        <div class="proj">
-          <div class="id">2.2</div>
-          <div>
-            <h4>Adaptive AI closed-loop control for graded AM</h4>
-            <p>Controllers that track the planned composition, not just melt-pool geometry, and correct it in real time.</p>
-            <span class="pill">AI: learned adaptive control + multi-modal sensing</span>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <p class="mission">Cost and qualification are design objectives alongside performance in every project: the goal is parts that perform well and are also <b>affordable and certifiable</b>.</p>
-    <p style="text-align:center;margin-top:24px;"><a class="btn outline" href="research.html">Read the full research plan <i class="fas fa-arrow-right"></i></a></p>
+    {% include scales.html %}
   </div>
 </section>
 
-<!-- Who benefits -->
+<!-- Challenges -->
 <section class="section">
   <div class="container">
     <div class="section-head">
-      <span class="eyebrow">Impact</span>
-      <h2>Who benefits</h2>
+      <span class="eyebrow">Future research</span>
+      <h2>Two challenges for my lab</h2>
     </div>
-    <div class="grid cols-3">
+    <div class="grid cols-2">
       <div class="card thrust">
         <div class="body">
-          <div class="label"><i class="fas fa-project-diagram"></i></div>
-          <h3>AI-design researchers</h3>
-          <p>Their alloys, architectures and parts become buildable, at a known cost.</p>
+          <div class="label">1</div>
+          <h3>Build manufacturability into AI design</h3>
+          <p>AI designs rarely account for what a metal AM machine can build, or at what cost.</p>
         </div>
       </div>
       <div class="card thrust">
         <div class="body">
-          <div class="label"><i class="fas fa-industry"></i></div>
-          <h3>AM machine builders and users</h3>
-          <p>AI process models, composition-aware toolpaths and adaptive controllers for their machines.</p>
-        </div>
-      </div>
-      <div class="card thrust">
-        <div class="body">
-          <div class="label"><i class="fas fa-plane"></i></div>
-          <h3>Critical industries</h3>
-          <p>Aerospace, nuclear energy and defence get certifiable, economically viable metal parts.</p>
+          <div class="label">2</div>
+          <h3>Make AM accurate and fast enough</h3>
+          <p>So that AM can build what AI designs, to specification and in a certifiable way.</p>
         </div>
       </div>
     </div>
+    <p style="margin-top:24px;"><a class="btn outline" href="research.html">Read the research vision <i class="fas fa-arrow-right"></i></a></p>
   </div>
 </section>
 
@@ -139,31 +85,31 @@ nav: home
     <div class="section-head">
       <span class="eyebrow">Now at MIT &amp; in the pipeline</span>
       <h2>Ongoing projects</h2>
-      <p>Current, unpublished work that lays the groundwork for the four projects.</p>
+      <p>Current, unpublished work at MIT and with collaborators.</p>
     </div>
     <div class="grid cols-2">
       <a class="card" href="projects.html#blisk">
         <img class="thumb" style="object-position: 30% 75%;" src="images/work/blisk_planner.jpg" alt="Toolpath planner render of the graded blisk, coloured by alloy" />
         <div class="body">
-          <span class="tag">MIT &middot; Toward Project 1.2</span>
+          <span class="tag">MIT &middot; DARPA METALS</span>
           <h3>Functionally graded turbine blisk</h3>
-          <p>Characterizing the manufacture of graded blisks and planning their toolpaths, accounting for dilution and heat build-up.</p>
-        </div>
-      </a>
-      <a class="card" href="projects.html#closedloop">
-        <img class="thumb" src="images/work/closed_loop_compare.jpg" alt="The same part built without and with closed-loop control" />
-        <div class="body">
-          <span class="tag">U of T &middot; Toward Project 2.2</span>
-          <h3>Deep-learning closed-loop control of DED</h3>
-          <p>A learned controller that reads images of the build and adjusts the laser on the fly. Manuscript and patent application in preparation.</p>
+          <p>A component-level, multi-alloy gas-turbine blisk, planned with a toolpath&ndash;composition optimizer that accounts for dilution and heat build-up.</p>
         </div>
       </a>
       <a class="card" href="projects.html#hamr">
         <img class="thumb contain" src="images/work/hamr3_printhead.jpg" alt="Inkjet printhead over the build area of the HAMR3 hybrid machine" />
         <div class="body">
-          <span class="tag">MIT &middot; Graded materials by LPBF</span>
+          <span class="tag">MIT &middot; Mechanosynthesis Group</span>
           <h3>Hybrid inkjet + laser powder bed fusion</h3>
           <p>Jetting nanoparticle inks onto each powder layer to alloy metals voxel by voxel and print smooth in-plane composition gradients.</p>
+        </div>
+      </a>
+      <a class="card" href="projects.html#closedloop">
+        <img class="thumb" src="images/work/closed_loop_compare.jpg" alt="The same part built without and with closed-loop control" />
+        <div class="body">
+          <span class="tag">U of T &middot; In preparation</span>
+          <h3>Deep-learning closed-loop control of DED</h3>
+          <p>A learned controller that reads images of the build and adjusts the laser on the fly.</p>
         </div>
       </a>
       <a class="card" href="projects.html#magnetic">
@@ -171,11 +117,11 @@ nav: home
         <div class="body">
           <span class="tag">UCL &middot; Synchrotron X-ray</span>
           <h3>Magnetic fields as a melt-pool actuator</h3>
-          <p>In-situ X-ray imaging of DED of 316L and IN718 under a magnetic field, toward a new input for melt-pool control. Manuscript in preparation.</p>
+          <p>Direct X-ray evidence of thermoelectric magnetohydrodynamic flow in DED of 316L and IN718, toward a new knob for melt-pool control.</p>
         </div>
       </a>
     </div>
-    <p style="margin-top:28px;"><a href="projects.html#ongoing">All ongoing projects &rarr;</a></p>
+    <p style="margin-top:28px;"><a href="projects.html#ongoing">All ongoing projects, including impact-resistant bi-metals &rarr;</a></p>
   </div>
 </section>
 
@@ -198,9 +144,9 @@ nav: home
       <a class="tile" href="projects.html#ded">
         <img src="images/thumbs/ded_inside.webp" alt="DED head printing inside the custom-built system" />
         <div class="tile-body">
-          <span class="tag">Platform &middot; ASM IMAT 1st Place 2025</span>
-          <h3>Multi-material DED platform</h3>
-          <p>A full-size DED system I built from scratch, the base for the bi-metallic and multifunctional work.</p>
+          <span class="tag">ASM IMAT 1st Place 2025</span>
+          <h3>Custom multi-material DED platform</h3>
+          <p>A full-size DED system I built from scratch, the base for my bi-metallic and multifunctional work.</p>
         </div>
       </a>
       <a class="tile" href="projects.html#ded_opt">
@@ -208,7 +154,7 @@ nav: home
         <div class="tile-body">
           <span class="tag">Additive Manufacturing 2025</span>
           <h3>AIDED inverse process optimization</h3>
-          <p>Deep learning finds optimal DED parameters for given objectives within 1&ndash;3 h, and transfers from 316L to pure Ni with one-fifth of the data.</p>
+          <p>ML + genetic algorithms find DED process windows from single tracks to multi-layer builds.</p>
         </div>
       </a>
       <a class="tile" href="projects.html#tailor3Dms">
@@ -254,8 +200,8 @@ nav: home
         at the University of Toronto with Prof. Yu Zou.
       </p>
       <p>
-        My background spans AI-driven design and process optimization through to building and improving metal AM machines.
-        I build the machines, write the optimization and control software, and test the parts that come out.
+        My work sits where <b>manufacturing processes</b>, <b>mechanics of materials</b> and <b>artificial intelligence</b> meet.
+        I build the machines, write the control and optimization software, and test the parts that come out.
       </p>
       <div class="actions" style="margin-top:20px;">
         <a class="btn" href="aboutme.html">More about me</a>
