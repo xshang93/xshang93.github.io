@@ -123,7 +123,7 @@ b, strong { color: var(--fg); font-weight: 600; }
 :root[data-theme="dark"] .theme-toggle .fa-moon { display: none; }
 .nav-toggle { display: none; }
 
-@media (max-width: 1080px) {
+@media (max-width: 1240px) {
   .nav-toggle { display: grid; }
   .site-header nav { margin-left: 0; }
   .nav {
@@ -344,8 +344,8 @@ a.card:hover .thumb { transform: scale(1.03); }
 .pubs { padding-left: 0; list-style: none; counter-reset: pub var(--start, 0); }
 .pubs li { position: relative; padding: 16px 0 16px 56px; border-bottom: 1px solid var(--line); font-size: .95rem; color: var(--muted); }
 .pubs li::before {
-  counter-increment: pub -1; content: counter(pub);
-  position: absolute; left: 0; top: 16px; width: 38px; text-align: right;
+  counter-increment: pub -1; content: var(--pfx, "") counter(pub);
+  position: absolute; left: 0; top: 16px; width: 42px; text-align: right;
   font-family: var(--sans); font-weight: 600; color: var(--faint); font-size: .95rem; letter-spacing: .04em;
 }
 .pubs li.first::before { color: var(--fg); }
@@ -452,3 +452,70 @@ figure.feature-media { margin: 0; }
 .inst-logos img { height: 48px; width: auto; }
 :root[data-theme="dark"] .inst-logos img[src*="mit.svg"] { filter: brightness(0) invert(1); }
 @media (max-width: 600px) { .inst-logos { gap: 20px; } .inst-logos img { height: 36px; } }
+
+/* Four-step lab plan graphic and research-direction figures */
+.scales.four { grid-template-columns: repeat(4, 1fr); }
+.scales.four::before { left: 12.5%; right: 12.5%; }
+@media (max-width: 900px) {
+  .scales.four { grid-template-columns: repeat(2, 1fr); }
+  .scales.four .scale-step:last-child { grid-column: auto; }
+}
+.fig-white { background: #fff; border: 1px solid var(--line); border-radius: var(--radius); padding: 14px; }
+.fig-white img { width: 100%; display: block; }
+.fig-caption { font-size: .84rem; color: var(--faint); margin-top: 10px; }
+.card .fig-white { border: 0; border-bottom: 1px solid var(--line); border-radius: 0; }
+.builds-on { font-size: .86rem !important; margin-top: auto; padding-top: 10px; border-top: 1px solid var(--line); }
+.gaps { counter-reset: gap; list-style: none; padding: 0; margin: 0 0 1.2em; }
+.gaps li { position: relative; padding-left: 40px; margin-bottom: 12px; color: var(--muted); }
+.gaps li::before { counter-increment: gap; content: counter(gap); position: absolute; left: 0; top: 0; width: 26px; height: 26px; border: 1.5px solid var(--fg); border-radius: 50%; display: grid; place-items: center; font-family: var(--sans); font-size: .8rem; font-weight: 600; color: var(--fg); }
+.card .fig-white { aspect-ratio: 2 / 1; display: grid; place-items: center; }
+.card .fig-white img { max-height: 100%; width: auto; max-width: 100%; }
+
+/* Keep the nav on one line now that it has eight tabs */
+.nav a { white-space: nowrap; }
+@media (min-width: 1241px) {
+  .nav a { padding: 8px 7px; letter-spacing: .05em; font-size: .78rem; }
+  .nav a.cv-link { margin-left: 6px; padding: 7px 12px; }
+}
+@media (min-width: 1241px) and (max-width: 1260px) { .brand small { display: none; } }
+
+/* Section dropdowns under each nav tab */
+[id] { scroll-margin-top: 84px; }
+.nav .has-sub { position: relative; }
+.nav .sub {
+  display: none; position: absolute; top: 100%; left: 0; z-index: 60; min-width: 230px;
+  list-style: none; margin: 0; padding: 8px 0; background: var(--bg);
+  border: 1px solid var(--line); border-radius: var(--radius); box-shadow: 0 10px 28px rgba(0,0,0,.12);
+}
+.nav .has-sub:hover > .sub, .nav .has-sub:focus-within > .sub { display: block; }
+.nav .sub a {
+  padding: 8px 16px; border: 0; font-size: .74rem; letter-spacing: .06em; font-weight: 500;
+  text-transform: none; color: var(--muted); white-space: nowrap;
+}
+.nav .sub a:hover { color: var(--fg); background: var(--panel); border: 0; }
+.nav .has-sub:last-of-type .sub, .nav li:nth-last-child(-n+3) > .sub { left: auto; right: 0; }
+.sub-toggle { display: none; }
+@media (max-width: 1240px) {
+  .nav .sub { position: static; display: none; min-width: 0; border: 0; box-shadow: none; padding: 0 0 6px 14px; background: none; }
+  .nav .has-sub:hover > .sub, .nav .has-sub:focus-within > .sub { display: none; }
+  .nav .has-sub.open > .sub { display: block; }
+  .nav .sub a { padding: 9px 4px; border-bottom: 1px solid var(--line); font-size: .8rem; }
+  .sub-toggle {
+    display: grid; place-items: center; position: absolute; right: 0; top: 4px; width: 40px; height: 36px;
+    background: none; border: 0; color: var(--fg); cursor: pointer; font-size: .8rem;
+  }
+  .has-sub.open > .sub-toggle i { transform: rotate(180deg); }
+}
+
+/* Journal cover thumbnails on first-author publications */
+.pubs li.has-cover { padding-right: 104px; min-height: 142px; }
+.pubs li.has-cover .cover { position: absolute; right: 0; top: 16px; width: 80px; line-height: 0; }
+.pubs li.has-cover .cover img { width: 80px; height: auto; border: 1px solid var(--line); box-shadow: 0 2px 6px rgba(0,0,0,.12); transition: transform .15s ease; }
+.pubs li.has-cover .cover:hover img { transform: translateY(-2px); }
+@media (max-width: 600px) {
+  .pubs li.has-cover { padding-right: 72px; min-height: 112px; }
+  .pubs li.has-cover .cover, .pubs li.has-cover .cover img { width: 56px; }
+}
+
+/* Tile image confined to the visible top area, framed on its lower part (e.g. DED melt pool) */
+.tile img.upper { height: 44%; object-position: center 95%; }

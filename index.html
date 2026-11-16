@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Xiao Shang | AI-Driven Design & Metal Additive Manufacturing"
+title: "Xiao Shang | AI-Driven Manufacturing of Critical Metal Components"
 nav: home
 ---
 
@@ -11,7 +11,7 @@ nav: home
   </div>
   <div class="container">
     <div class="hero-copy">
-      <span class="eyebrow">AI-driven design &middot; Metal additive manufacturing</span>
+      <span class="eyebrow">AI-driven manufacturing &middot; Multi-material metal components</span>
             <h1>Xiao Shang</h1>
       <p class="role">
         Postdoctoral Researcher, Massachusetts Institute of Technology<br />
@@ -23,123 +23,94 @@ nav: home
         <img src="images/logos/mcgill.png" alt="McGill University" width="200" height="48" />
         <img src="images/logos/scut.png" alt="South China University of Technology" width="48" height="48" />
       </div>
-      <p class="tagline">I want manufacturing to keep pace with AI design, so that what AI designs can be built <span class="grad-text">accurately, quickly and affordably</span>.</p>
+      <p class="tagline">I want AI-designed materials and parts to be not only high-performing but also <span class="grad-text">manufacturable</span>, so that their benefits reach industry.</p>
 
       <div class="market"><span class="dot"></span>On the 2026&ndash;27 academic job market: tenure-track faculty positions</div>
 
       <div class="actions">
         <a class="btn" href="research.html">Research vision <i class="fas fa-arrow-right"></i></a>
-        <a class="btn ghost" href="projects.html#ongoing">Current projects</a>
-        <a class="btn ghost" href="files/cv.pdf" target="_blank" rel="noopener"><i class="fas fa-file-pdf"></i> CV</a>
+        <a class="btn ghost" href="research.html#ongoing">Current projects</a>
+        <a class="btn ghost" href="files/cv.pdf?v=2026-11" target="_blank" rel="noopener"><i class="fas fa-file-pdf"></i> CV</a>
       </div>
 
       <div class="hero-meta">
         <div><b>21</b>journal articles</div>
         <div><b>7</b>first / co-first author</div>
         <div><b>5</b>patents &amp; applications</div>
-        <div><b>$480K+</b>competitive funding</div>
+        <div><b>$493.5K</b>competitive funding</div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- Scale graphic -->
-<section class="section dark" style="padding-top:64px;">
+<!-- 1. Research vision -->
+<section id="vision" class="section dark" style="padding-top:72px;">
   <div class="container">
-    <div class="section-head" style="text-align:center;">
-      <span class="eyebrow">Research vision</span>
-      <h2>Overcoming the manufacturing bottleneck in AI-driven design</h2>
-      <p style="margin:0 auto;">
-        AI now designs new alloys and parts far faster than we can make them. My lab, the
-        <b>Additive Innovation and Artificial Intelligence (AI&sup2;) Lab</b>, will make AI designs buildable, and AM able to build them.
-      </p>
+    <div class="feature" style="padding:0;">
+      <div>
+        <span class="eyebrow">Research vision</span>
+        <h2>Next-generation critical metal components through AI-driven manufacturing</h2>
+        <p>
+          Turbine blisks and other critical parts must run hotter, last longer and weigh less, often more than one alloy can deliver.
+          Multi-material parts put the right alloy where it is needed, and AI can now design them. Two gaps stand between
+          these designs and real parts:
+        </p>
+        <ol class="gaps">
+          <li>AI designs seldom consider manufacturing limits, so the parts can crack or form brittle phases.</li>
+          <li>Additive manufacturing cannot yet place each material accurately where it was designed.</li>
+        </ol>
+        <p>
+          My lab, the <b>Additive Innovation and Artificial Intelligence (AI&sup2;) Lab</b>, will close both gaps.
+        </p>
+      </div>
+      <figure class="fig-white" style="margin:0;">
+        <img src="images/work/vision_tradeoff.png" alt="Performance versus manufacturability: single-alloy parts are manufacturable but limited; AI-aided multi-material designs perform well but are not yet manufacturable; the target is both" />
+      </figure>
     </div>
-    {% include scales.html %}
   </div>
 </section>
 
-<!-- Challenges -->
-<section class="section">
+<!-- 2. Two research directions -->
+<section class="section" id="directions">
   <div class="container">
     <div class="section-head">
       <span class="eyebrow">Future research</span>
-      <h2>Two challenges for my lab</h2>
+      <h2>Two research directions</h2>
     </div>
     <div class="grid cols-2">
       <div class="card thrust">
+        <div class="fig-white"><img src="images/work/direction1.png" alt="Surrogate models of phase formation and of the printing process guide a generative AI toward manufacturable multi-material designs" loading="lazy" /></div>
         <div class="body">
           <div class="label">1</div>
-          <h3>Build manufacturability into AI design</h3>
-          <p>AI designs rarely account for what a metal AM machine can build, or at what cost.</p>
+          <h3>AI design of manufacturable multi-material components</h3>
+          <p>Generative AI, guided by surrogate models of phase formation and of the printing process, proposes designs that perform well and can be built without defects.</p>
+          <p class="builds-on"><b>Builds on:</b> bi-metallic steels, multifunctional multi-metal parts, AI inverse microstructure design.</p>
         </div>
       </div>
       <div class="card thrust">
+        <div class="fig-white"><img src="images/work/direction2.png" alt="Toolpath planning and AI closed-loop control with multi-modal sensors for accurate material placement" loading="lazy" /></div>
         <div class="body">
           <div class="label">2</div>
-          <h3>Make AM accurate and fast enough</h3>
-          <p>So that AM can build what AI designs, to specification and in a certifiable way.</p>
+          <h3>AI-driven additive manufacturing for accurate material placement</h3>
+          <p>Toolpath planning before printing, and AI closed-loop control with multi-modal sensors during printing, so that each material ends up where it was designed.</p>
+          <p class="builds-on"><b>Builds on:</b> a multi-material DED machine I built, AI process optimization, melt-pool studies, closed-loop DED.</p>
         </div>
       </div>
     </div>
-    <p style="margin-top:24px;"><a class="btn outline" href="research.html">Read the research vision <i class="fas fa-arrow-right"></i></a></p>
-  </div>
-</section>
-
-<!-- Ongoing -->
-<section class="section dark">
-  <div class="container">
-    <div class="section-head">
-      <span class="eyebrow">Now at MIT &amp; in the pipeline</span>
-      <h2>Ongoing projects</h2>
-      <p>Current, unpublished work at MIT and with collaborators.</p>
-    </div>
-    <div class="grid cols-2">
-      <a class="card" href="projects.html#blisk">
-        <img class="thumb" style="object-position: 30% 75%;" src="images/work/blisk_planner.jpg" alt="Toolpath planner render of the graded blisk, coloured by alloy" />
-        <div class="body">
-          <span class="tag">MIT &middot; DARPA METALS</span>
-          <h3>Functionally graded turbine blisk</h3>
-          <p>A component-level, multi-alloy gas-turbine blisk, planned with a toolpath&ndash;composition optimizer that accounts for dilution and heat build-up.</p>
-        </div>
-      </a>
-      <a class="card" href="projects.html#hamr">
-        <img class="thumb contain" src="images/work/hamr3_printhead.jpg" alt="Inkjet printhead over the build area of the HAMR3 hybrid machine" />
-        <div class="body">
-          <span class="tag">MIT &middot; Mechanosynthesis Group</span>
-          <h3>Hybrid inkjet + laser powder bed fusion</h3>
-          <p>Jetting nanoparticle inks onto each powder layer to alloy metals voxel by voxel and print smooth in-plane composition gradients.</p>
-        </div>
-      </a>
-      <a class="card" href="projects.html#closedloop">
-        <img class="thumb" src="images/work/closed_loop_compare.jpg" alt="The same part built without and with closed-loop control" />
-        <div class="body">
-          <span class="tag">U of T &middot; In preparation</span>
-          <h3>Deep-learning closed-loop control of DED</h3>
-          <p>A learned controller that reads images of the build and adjusts the laser on the fly.</p>
-        </div>
-      </a>
-      <a class="card" href="projects.html#magnetic">
-        <img class="thumb" src="images/work/mag_xray.webp" alt="Synchrotron X-ray video of an IN718 melt pool under a magnetic field" />
-        <div class="body">
-          <span class="tag">UCL &middot; Synchrotron X-ray</span>
-          <h3>Magnetic fields as a melt-pool actuator</h3>
-          <p>Direct X-ray evidence of thermoelectric magnetohydrodynamic flow in DED of 316L and IN718, toward a new knob for melt-pool control.</p>
-        </div>
-      </a>
-    </div>
-    <p style="margin-top:28px;"><a href="projects.html#ongoing">All ongoing projects, including impact-resistant bi-metals &rarr;</a></p>
+    <p style="margin-top:28px;"><a class="btn outline" href="research.html">Read the research vision <i class="fas fa-arrow-right"></i></a></p>
   </div>
 </section>
 
 <!-- Published highlights -->
-<section class="section">
+<section class="section alt" id="foundation">
   <div class="container">
     <div class="section-head">
-      <span class="eyebrow">Published work</span>
-      <h2>Research highlights</h2>
+      <span class="eyebrow">Past experience</span>
+      <h2>The foundation: what I have built</h2>
+      <p>I have designed multi-material steels, built a multi-material DED machine, and developed AI models for process optimization and materials design. Selected published results:</p>
     </div>
     <div class="grid cols-3">
-      <a class="tile" href="projects.html#acta_fgm">
+      <a class="tile" href="research.html#acta_fgm">
         <img class="contain" src="images/thumbs/acta_fgm.jpg" alt="Confined necking in heterostructured bi-metallic steels" />
         <div class="tile-body">
           <span class="tag">Acta Materialia 2026</span>
@@ -147,15 +118,15 @@ nav: home
           <p>Confined-necking co-deformation raises tensile ductility by 27.3% over 316L.</p>
         </div>
       </a>
-      <a class="tile" href="projects.html#ded">
-        <img src="images/thumbs/ded_inside.webp" alt="DED head printing inside the custom-built system" />
+      <a class="tile" href="research.html#ded">
+        <img class="upper" src="images/thumbs/ded_inside.webp" alt="DED head printing inside the custom-built system" />
         <div class="tile-body">
           <span class="tag">ASM IMAT 1st Place 2025</span>
           <h3>Custom multi-material DED platform</h3>
           <p>A full-size DED system I built from scratch, the base for my bi-metallic and multifunctional work.</p>
         </div>
       </a>
-      <a class="tile" href="projects.html#ded_opt">
+      <a class="tile" href="research.html#ded_opt">
         <img class="contain" src="images/thumbs/aided.jpg" alt="AIDED framework" />
         <div class="tile-body">
           <span class="tag">Additive Manufacturing 2025</span>
@@ -163,7 +134,7 @@ nav: home
           <p>ML + genetic algorithms find DED process windows from single tracks to multi-layer builds.</p>
         </div>
       </a>
-      <a class="tile" href="projects.html#tailor3Dms">
+      <a class="tile" href="research.html#tailor3Dms">
         <img class="contain" src="images/thumbs/tailor_ms.jpg" alt="Deep learning inverse microstructure design" />
         <div class="tile-body">
           <span class="tag">Materials Today 2023</span>
@@ -171,15 +142,15 @@ nav: home
           <p>A 3D-CNN and genetic algorithm go straight from target properties to 3D microstructures.</p>
         </div>
       </a>
-      <a class="tile" href="projects.html#mfm">
-        <img src="images/thumbs/mfm_qr.webp" alt="Reading a QR code embedded inside a metal part" />
+      <a class="tile" href="research.html#mfm">
+        <img class="upper" style="object-position:center 55%;" src="images/thumbs/mfm_qr.webp" alt="Reading a QR code embedded inside a metal part" />
         <div class="tile-body">
-          <span class="tag">MetalMat 2026 &middot; 2 patents pending</span>
+          <span class="tag">MetalMat 2026 &middot; 2 patent applications</span>
           <h3>Multifunctional multi-metal parts</h3>
           <p>Magnetic force, embedded data, better seals and programmable mechanics from one DED process.</p>
         </div>
       </a>
-      <a class="tile" href="projects.html#meltpool">
+      <a class="tile" href="research.html#meltpool">
         <img src="images/thumbs/meltpool.jpg" alt="Melt pool cross-sections from laser DED" />
         <div class="tile-body">
           <span class="tag">J. Manuf. Processes 2025 &middot; co-first</span>
@@ -191,8 +162,54 @@ nav: home
   </div>
 </section>
 
+<!-- Ongoing -->
+<section class="section" id="ongoing">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Now at MIT &amp; in the pipeline</span>
+      <h2>Ongoing projects</h2>
+      <p>Current, unpublished work at MIT and with collaborators.</p>
+    </div>
+    <div class="grid cols-2">
+      <a class="card" href="research.html#blisk">
+        <img class="thumb" style="object-position: 30% 75%;" src="images/work/blisk_planner.jpg" alt="Toolpath planner render of the graded blisk, coloured by alloy" />
+        <div class="body">
+          <span class="tag">MIT &middot; DARPA METALS</span>
+          <h3>Functionally graded turbine blisk</h3>
+          <p>A component-level, multi-alloy gas-turbine blisk, planned with a toolpath&ndash;composition optimizer that accounts for dilution and heat build-up.</p>
+        </div>
+      </a>
+      <a class="card" href="research.html#hamr">
+        <img class="thumb contain" src="images/work/hamr3_printhead.jpg" alt="Inkjet printhead over the build area of the HAMR3 hybrid machine" />
+        <div class="body">
+          <span class="tag">MIT &middot; Mechanosynthesis Group</span>
+          <h3>Hybrid inkjet + laser powder bed fusion</h3>
+          <p>Jetting nanoparticle inks onto each powder layer to alloy metals voxel by voxel and print smooth in-plane composition gradients.</p>
+        </div>
+      </a>
+      <a class="card" href="research.html#closedloop">
+        <img class="thumb" src="images/work/closed_loop_compare.jpg" alt="The same part built without and with closed-loop control" />
+        <div class="body">
+          <span class="tag">U of T &middot; In submission</span>
+          <h3>Deep-learning closed-loop control of DED</h3>
+          <p>A learned controller that reads images of the build and adjusts the laser on the fly.</p>
+        </div>
+      </a>
+      <a class="card" href="research.html#magnetic">
+        <img class="thumb" src="images/work/mag_xray.webp" alt="Synchrotron X-ray video of an IN718 melt pool under a magnetic field" />
+        <div class="body">
+          <span class="tag">UCL &middot; Synchrotron X-ray</span>
+          <h3>Magnetic fields as a melt-pool actuator</h3>
+          <p>Direct X-ray evidence of thermoelectric magnetohydrodynamic flow in DED of 316L and IN718, toward a new knob for melt-pool control.</p>
+        </div>
+      </a>
+    </div>
+    <p style="margin-top:28px;"><a href="research.html#ongoing">All ongoing projects, including impact-resistant bi-metals &rarr;</a></p>
+  </div>
+</section>
+
 <!-- About + recognition -->
-<section class="section alt">
+<section class="section alt" id="about">
   <div class="container two-col">
     <div>
       <img class="headshot sm" src="images/work/headshot.jpg" alt="Portrait of Xiao Shang" />
@@ -218,17 +235,18 @@ nav: home
       <h3>Selected recognition</h3>
       <ul class="icon-list">
         <li><i class="fas fa-medal"></i><span><b>2027 AIME Henry DeWitt Smith Scholarship</b><br />TMS 2027 &middot; US$2,500 + US$500 travel grant</span></li>
-        <li><i class="fas fa-award"></i><span><b>NSERC Canada Postdoctoral Research Award</b><br />2026 &middot; $140,000</span></li>
+        <li><i class="fas fa-award"></i><span><b>NSERC Canada Postdoctoral Research Award</b><br />2026 &middot; $140,000 &middot; ranked 6/327</span></li>
         <li><i class="fas fa-trophy"></i><span><b>1st Place, ASM International IMAT Materials Venture Challenge</b><br />2025 &middot; autonomous additive manufacturing system</span></li>
         <li><i class="fas fa-graduation-cap"></i><span><b>NSERC Canada Graduate Scholarship &ndash; Doctoral</b><br />2023 &middot; $120,000</span></li>
         <li><i class="fas fa-lightbulb"></i><span><b>Connaught Innovation Award</b>, University of Toronto<br />2023 &middot; $150,000, with Prof. Yu Zou</span></li>
       </ul>
+      <p style="margin-top:20px;"><a href="funding.html">All funding &amp; recognition &rarr;</a></p>
     </div>
   </div>
 </section>
 
 <!-- News -->
-<section class="section">
+<section class="section" id="news">
   <div class="container">
     <div class="section-head">
       <span class="eyebrow">News</span>

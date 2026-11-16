@@ -12,14 +12,85 @@
 
     <nav>
       <ul class="nav" id="nav">
-        <li><a href="{{ '/' | relative_url }}" class="{% if page.nav == 'home' %}current{% endif %}">Home</a></li>
-        <li><a href="{{ '/research.html' | relative_url }}" class="{% if page.nav == 'research' %}current{% endif %}">Research</a></li>
-        <li><a href="{{ '/projects.html' | relative_url }}" class="{% if page.nav == 'projects' %}current{% endif %}">Projects</a></li>
-        <li><a href="{{ '/publications.html' | relative_url }}" class="{% if page.nav == 'publications' %}current{% endif %}">Publications</a></li>
-        <li><a href="{{ '/teaching.html' | relative_url }}" class="{% if page.nav == 'teaching' %}current{% endif %}">Teaching &amp; Mentoring</a></li>
-        <li><a href="{{ '/service.html' | relative_url }}" class="{% if page.nav == 'service' %}current{% endif %}">Service</a></li>
-        <li><a href="{{ '/aboutme.html' | relative_url }}" class="{% if page.nav == 'about' %}current{% endif %}">About</a></li>
-        <li><a href="{{ '/files/cv.pdf' | relative_url }}" class="cv-link" target="_blank" rel="noopener"><i class="fas fa-file-pdf"></i> CV</a></li>
+        <li class="has-sub"><a href="{{ '/' | relative_url }}" class="{% if page.nav == 'home' %}current{% endif %}">Home</a>
+          <button class="sub-toggle" type="button" aria-label="Show Home sections"><i class="fas fa-chevron-down"></i></button>
+          <ul class="sub">
+            <li><a href="{{ '/' | relative_url }}#vision">Research vision</a></li>
+            <li><a href="{{ '/' | relative_url }}#directions">Two research directions</a></li>
+            <li><a href="{{ '/' | relative_url }}#foundation">What I have built</a></li>
+            <li><a href="{{ '/' | relative_url }}#ongoing">Ongoing projects</a></li>
+            <li><a href="{{ '/' | relative_url }}#about">About &amp; recognition</a></li>
+            <li><a href="{{ '/' | relative_url }}#news">News</a></li>
+          </ul>
+        </li>
+        <li class="has-sub"><a href="{{ '/research.html' | relative_url }}" class="{% if page.nav == 'research' %}current{% endif %}">Research</a>
+          <button class="sub-toggle" type="button" aria-label="Show Research sections"><i class="fas fa-chevron-down"></i></button>
+          <ul class="sub">
+            <li><a href="{{ '/research.html' | relative_url }}#why">Why multi-material, and why AI</a></li>
+            <li><a href="{{ '/research.html' | relative_url }}#directions">Two research directions</a></li>
+            <li><a href="{{ '/research.html' | relative_url }}#longterm">Long-term vision</a></li>
+            <li><a href="{{ '/research.html' | relative_url }}#foundation">Foundation for each direction</a></li>
+            <li><a href="{{ '/research.html' | relative_url }}#ongoing">Current projects</a></li>
+            <li><a href="{{ '/research.html' | relative_url }}#published">Published projects</a></li>
+            <li><a href="{{ '/research.html' | relative_url }}#impact">Where it matters</a></li>
+          </ul>
+        </li>
+        <li class="has-sub"><a href="{{ '/publications.html' | relative_url }}" class="{% if page.nav == 'publications' %}current{% endif %}">Publications</a>
+          <button class="sub-toggle" type="button" aria-label="Show Publications sections"><i class="fas fa-chevron-down"></i></button>
+          <ul class="sub">
+            <li><a href="{{ '/publications.html' | relative_url }}#first-author">First-author articles</a></li>
+            <li><a href="{{ '/publications.html' | relative_url }}#co-authored">Co-authored articles</a></li>
+            <li><a href="{{ '/publications.html' | relative_url }}#thesis">Doctoral thesis</a></li>
+            <li><a href="{{ '/publications.html' | relative_url }}#manuscripts">Manuscripts in submission</a></li>
+            <li><a href="{{ '/publications.html' | relative_url }}#talks">Conference presentations</a></li>
+            <li><a href="{{ '/publications.html' | relative_url }}#patents">Intellectual property</a></li>
+          </ul>
+        </li>
+        <li class="has-sub"><a href="{{ '/funding.html' | relative_url }}" class="{% if page.nav == 'funding' %}current{% endif %}">Funding &amp; Recognition</a>
+          <button class="sub-toggle" type="button" aria-label="Show Funding sections"><i class="fas fa-chevron-down"></i></button>
+          <ul class="sub">
+            <li><a href="{{ '/funding.html' | relative_url }}#highlights">Major awards</a></li>
+            <li><a href="{{ '/funding.html' | relative_url }}#fellowships">Fellowships &amp; scholarships</a></li>
+            <li><a href="{{ '/funding.html' | relative_url }}#grants">Research grants</a></li>
+            <li><a href="{{ '/funding.html' | relative_url }}#awards">Awards &amp; prizes</a></li>
+          </ul>
+        </li>
+        <li class="has-sub"><a href="{{ '/teaching.html' | relative_url }}" class="{% if page.nav == 'teaching' %}current{% endif %}">Teaching &amp; Mentoring</a>
+          <button class="sub-toggle" type="button" aria-label="Show Teaching sections"><i class="fas fa-chevron-down"></i></button>
+          <ul class="sub">
+            <li><a href="{{ '/teaching.html' | relative_url }}#approach">Teaching approach</a></li>
+            <li><a href="{{ '/teaching.html' | relative_url }}#courses">Courses I can teach</a></li>
+            <li><a href="{{ '/teaching.html' | relative_url }}#experience">Teaching experience</a></li>
+            <li><a href="{{ '/teaching.html' | relative_url }}#mentoring">Mentoring</a></li>
+          </ul>
+        </li>
+        <li class="has-sub"><a href="{{ '/service.html' | relative_url }}" class="{% if page.nav == 'service' %}current{% endif %}">Service</a>
+          <button class="sub-toggle" type="button" aria-label="Show Service sections"><i class="fas fa-chevron-down"></i></button>
+          <ul class="sub">
+            <li><a href="{{ '/service.html' | relative_url }}#editorial">Editorial service &amp; review</a></li>
+            <li><a href="{{ '/service.html' | relative_url }}#professional">Professional service</a></li>
+            <li><a href="{{ '/service.html' | relative_url }}#university">University service</a></li>
+            <li><a href="{{ '/service.html' | relative_url }}#outreach">Outreach</a></li>
+            <li><a href="{{ '/service.html' | relative_url }}#opensource">Open-source tools</a></li>
+            <li><a href="{{ '/service.html' | relative_url }}#memberships">Memberships &amp; licence</a></li>
+          </ul>
+        </li>
+        <li class="has-sub"><a href="{{ '/beyond.html' | relative_url }}" class="{% if page.nav == 'beyond' %}current{% endif %}">Beyond the Lab</a>
+          <button class="sub-toggle" type="button" aria-label="Show Beyond the Lab sections"><i class="fas fa-chevron-down"></i></button>
+          <ul class="sub">
+            <li><a href="{{ '/beyond.html' | relative_url }}#media">Media coverage</a></li>
+            <li><a href="{{ '/beyond.html' | relative_url }}#fun">Projects for fun</a></li>
+          </ul>
+        </li>
+        <li class="has-sub"><a href="{{ '/aboutme.html' | relative_url }}" class="{% if page.nav == 'about' %}current{% endif %}">About</a>
+          <button class="sub-toggle" type="button" aria-label="Show About sections"><i class="fas fa-chevron-down"></i></button>
+          <ul class="sub">
+            <li><a href="{{ '/aboutme.html' | relative_url }}#bio">Biography</a></li>
+            <li><a href="{{ '/aboutme.html' | relative_url }}#education">Appointments &amp; education</a></li>
+            <li><a href="{{ '/aboutme.html' | relative_url }}#cv">Curriculum vitae</a></li>
+          </ul>
+        </li>
+        <li><a href="{{ '/files/cv.pdf' | relative_url }}?v=2026-11" class="cv-link" target="_blank" rel="noopener"><i class="fas fa-file-pdf"></i> CV</a></li>
       </ul>
     </nav>
   </div>

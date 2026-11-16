@@ -9,6 +9,17 @@
       });
     }
 
+    // Mobile menu: chevrons expand each tab's section list
+    document.querySelectorAll('.sub-toggle').forEach(function (t) {
+      t.addEventListener('click', function () { t.parentNode.classList.toggle('open'); });
+    });
+    // Close the mobile menu after jumping to a section on the same page
+    if (nav) {
+      nav.querySelectorAll('.sub a').forEach(function (a) {
+        a.addEventListener('click', function () { nav.classList.remove('open'); if (btn) btn.setAttribute('aria-expanded', 'false'); });
+      });
+    }
+
     var themeBtn = document.querySelector('.theme-toggle');
     if (themeBtn) {
       themeBtn.addEventListener('click', function () {
